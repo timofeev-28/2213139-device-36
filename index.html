@@ -11,7 +11,6 @@
         <!-- container будет max-width: 1160px; и margin: 0 auto; -->
         <div class="container">
           <nav class="main-header__navigation navigation">
-            <!-- Вставил через свг из-за ховер-эффектов (про спрайты только слышал) -->
             <a class="navigation__logo" id="logo">
               <svg width="145" height="36" viewBox="0 0 145 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27.2188 0V35.3H19.6135V32.9C17.9124 34.8 15.5107 36 12.1084 36C5.5038 36 0 30.2 0 22.7C0 15.2 5.5038 9.4 12.1084 9.4C15.5107 9.4 18.0124 10.6 19.6135 12.5V0H27.2188ZM19.6135 22.7C19.6135 18.9 17.1118 16.5 13.6094 16.5C10.107 16.5 7.60524 18.9 7.60524 22.7C7.60524 26.5 10.107 28.9 13.6094 28.9C17.1118 28.8 19.6135 26.5 19.6135 22.7Z" fill="black"/>
@@ -23,10 +22,10 @@
                 <path d="M83.458 0V10.1L91.0633 0H83.458Z" fill="#510094"/>
               </svg>
             </a>
-            <div class="navigation__wrap-user">
+            <div class="navigation__user">
               <form class="navigation__form" action="https://echo.htmlacademy.ru/" method="post">
-                <input class="naviganion__input-search" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поле для поиска по сайту">
-                <button class="naviganion__btn-search btn-reset" type="submit">Найти</button>
+                <input class="navigation__user-search" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поле для поиска по сайту">
+                <button class="navigation__user-btn btn-reset" type="submit">Найти</button>
               </form>
               <ul class="navigation__list-user list-reset">
                 <li class="navigation__item-user">
@@ -35,27 +34,27 @@
                 <li class="navigation__item-user">
                   <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
                 </li>
-                <li class="navigation__item-user navigation__tooltip tooltip">
-                  <button class="navigation__link-user navigation__link-user--basket btn-reset" href="#">Корзина</button>
-                  <div class="tooltip__wrap">
-                    <!-- Я пока не уверен, что это то, что я думаю -->
-                    <ul class="tooltip__list list-reset">
-                      <li class="tooltip__item">
-                        <img class="tooltip__img" src="#" alt="Любительская селфи-палка">
-                        <span class="tooltip__text">Любительская селфи-палка</span>
-                        <button class="tooltip__btn" type="button"> <span>Удалить из корзины</span> </button>
+                <li class="navigation__item-user navigation__popover popover">
+                  <button class="navigation__link-user navigation__link-user--basket btn-reset">Корзина</button>
+                  <!-- ПОПОВЕР (я знаю только про тултипы, может это одно и то-же? :) -->
+                  <div class="popover__wrap ">
+                    <ul class="popover__list list-reset">
+                      <li class="popover__item">
+                        <img class="popover__img" src="#" alt="Любительская селфи-палка">
+                        <span class="popover__text">Любительская селфи-палка</span>
+                        <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
                       </li>
-                      <li class="tooltip__item">
-                        <img class="tooltip__img" src="#" alt="Профессиональная селфи-палка">
-                        <span class="tooltip__text">Профессиональная селфи-палка</span>
-                        <button class="tooltip__btn" type="button"> <span>Удалить из корзины</span> </button>
+                      <li class="popover__item">
+                        <img class="popover__img" src="#" alt="Профессиональная селфи-палка">
+                        <span class="popover__text">Профессиональная селфи-палка</span>
+                        <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
                       </li>
                     </ul>
-                    <div class="tooltip__total">
-                      <p class="tooltip__products">Товаров: 2</p>
-                      <p class="tooltip__amount">Сумма: 2000 ₽</p>
+                    <div class="popover__total">
+                      <p class="popover__products">Товаров: 2</p>
+                      <p class="popover__amount">Сумма: 2000 ₽</p>
                     </div>
-                    <button class="tooltip__btn btn-reset" type="button">открыть корзину</button>
+                    <button class="popover__btn btn-reset" type="button">открыть корзину</button>
                   </div>
                 </li>
               </ul>
@@ -96,83 +95,86 @@
         <section class="products">
           <div class="container">
             <h2 class="visually-hidden">Топ товаров</h2>
-            <!-- Кнопки навигации слайдера -->
-            <button class="slider__btn slider-prev btn-reset" type="button">
-              <span class="visually-hidden">Предыдущее фото</span>
-            </button>
-            <button class="slider__btn slider-next btn-reset" type="button">
-              <span class="visually-hidden">Следующее фото</span>
-            </button>
-            <!-- Слайдер раз -->
             <div class="products__slider slider">
-              <div class="slider__wrap-image">
-                <img class="slider__image" src="#" width="140" height="190" alt="Крутейший квадрокоптер с лазером">
+                            <!-- Кнопки навигации слайдера -->
+              <button class="slider__btn-nav slider-prev btn-reset" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider__btn-nav slider-next btn-reset" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+              <!-- Слайдер раз -->
+              <div class="slider__swiper">
+                <div class="slider__wrap-image">
+                  <img class="slider__image" src="#" width="140" height="190" alt="Крутейший квадрокоптер с лазером">
+                </div>
+                <div class="slider__wrap-descr">
+                  <h3 class="slider__title">Порхает как бабочка, жалит как пчела!</h3>
+                  <p class="slider__text">
+                    Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+                  </p>
+                  <button class="slider__btn-descr btn btn-reset" type="button">подробнее</button>
+                  <!-- разметку таблицей увидел в учебных материалах (хотя хочется обернуть в див, и в нем <p> и <span>)-->
+                  <table class="slider__table">
+                    <tr><th class="slider__cell-title">800 м</th><th class="slider__cell-title">50 м</th></tr>
+                    <tr><td class="slider__cell-descr">Дальность полета</td><td class="slider__cell-descr">Радиус поражения</td></tr>
+                  </table>
+                </div>
               </div>
-              <div class="slider__wrap-descr">
-                <h3 class="slider__title">Порхает как бабочка, жалит как пчела!</h3>
-                <p class="slider__text">
-                  Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-                </p>
-                <button class="slider__btn-descr btn btn-reset" type="button">подробнее</button>
-                <!-- разметку таблицей увидел в учебных материалах (хотя хочется обернуть в див, и в нем <p> и <span>)-->
-                <table class="slider__table">
-                  <tr><th class="table__cell-title">800 м</th><th class="table__cell-title">50 м</th></tr>
-                  <tr><td class="table__cell-descr">Дальность полета</td><td class="table__cell-descr">Радиус поражения</td></tr>
-                </table>
+              <!-- Слайдер два -->
+              <div class="slider__swiper">
+                <div class="slider__wrap-image">
+                  <img class="slider__image" src="#" width="140" height="190" alt="Мотивирующий Фитнес-браслет">
+                </div>
+                <div class="slider__wrap-descr">
+                  <h3 class="slider__title">Худеем правильно!</h3>
+                  <p class="slider__text">
+                    Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                  </p>
+                  <button class="slider__btn-descr btn btn-reset" type="button">подробнее</button>
+                  <table class="slider__table">
+                    <tr><th class="slider__cell-title">48 часов</th></tr>
+                    <tr><td class="slider__cell-descr">Без подзарядки</td></tr>
+                  </table>
+                </div>
               </div>
+              <!-- Слайдер три -->
+              <div class="slider__swiper">
+                <div class="slider__wrap-image">
+                  <img class="slider__image" src="#" width="140" height="190" alt="Самая длинная палка для селфи">
+                </div>
+                <div class="slider__wrap-descr">
+                  <h3 class="slider__title">Делай селфи, как Бен Стиллер!</h3>
+                  <p class="slider__text">
+                    Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+                  </p>
+                  <button class="slider__btn-descr btn btn-reset" type="button">подробнее</button>
+                  <table class="slider__table">
+                    <tr><th class="slider__cell-title">8,5 м</th><th class="slider__cell-title">5 кг</th><th class="slider__cell-title">Карбон</th></tr>
+                    <tr><td class="slider__cell-descr">Длина палки</td><td class="slider__cell-descr">Вес палки</td><td class="slider__cell-descr">Материал</td></tr>
+                  </table>
+                </div>
+              </div>
+              <!-- Пагинация -->
+              <ol class="slider__pagination list-reset">
+                <li class="slider__pagination-item">
+                  <button class="slider__pagination-btn btn-reset slider__pagination-btn--current" type="button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </li>
+                <li class="slider__pagination-item">
+                  <button class="slider__pagination-btn btn-reset" type="button">
+                    <span class="visually-hidden">2 фото</span>
+                  </button>
+                </li>
+                <li class="slider__pagination-item">
+                  <button class="slider__pagination-btn btn-reset" type="button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+              </ol>
             </div>
-            <!-- Слайдер два -->
-            <div class="products__slider slider">
-              <div class="slider__wrap-image">
-                <img class="slider__image" src="#" width="140" height="190" alt="Мотивирующий Фитнес-браслет">
-              </div>
-              <div class="slider__wrap-descr">
-                <h3 class="slider__title">Худеем правильно!</h3>
-                <p class="slider__text">
-                  Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
-                </p>
-                <button class="slider__btn-descr btn btn-reset" type="button">подробнее</button>
-                <table class="slider__table">
-                  <tr><th class="table__cell-title">48 часов</th></tr>
-                  <tr><td class="table__cell-descr">Без подзарядки</td></tr>
-                </table>
-              </div>
-            </div>
-            <!-- Слайдер три -->
-            <div class="products__slider slider">
-              <div class="slider__wrap-image">
-                <img class="slider__image" src="#" width="140" height="190" alt="Самая длинная палка для селфи">
-              </div>
-              <div class="slider__wrap-descr">
-                <h3 class="slider__title">Делай селфи, как Бен Стиллер!</h3>
-                <p class="slider__text">
-                  Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
-                </p>
-                <button class="slider__btn-descr btn btn-reset" type="button">подробнее</button>
-                <table class="slider__table">
-                  <tr><th class="table__cell-title">8,5 м</th><th class="table__cell-title">5 кг</th><th class="table__cell-title">Карбон</th></tr>
-                  <tr><td class="table__cell-descr">Длина палки</td><td class="table__cell-descr">Вес палки</td><td class="table__cell-descr">Материал</td></tr>
-                </table>
-              </div>
-            </div>
-            <!-- Пагинация -->
-            <ol class="slider__pagination list-reset">
-              <li class="slider__pagination-item">
-                <button class="slider__pagination-btn btn-reset slider__pagination-btn--current" type="button">
-                  <span class="visually-hidden">1 фото</span>
-                </button>
-              </li>
-              <li class="slider__pagination-item">
-                <button class="slider__pagination-btn btn-reset" type="button">
-                  <span class="visually-hidden">2 фото</span>
-                </button>
-              </li>
-              <li class="slider__pagination-item">
-                <button class="slider__pagination-btn btn-reset" type="button">
-                  <span class="visually-hidden">3 фото</span>
-                </button>
-              </li>
-            </ol>
+
           </div>
         </section>
 
@@ -350,17 +352,19 @@
 
         <section class="main-footer__social social">
           <h2 class="visually-hidden">Навигация и ссылки на соцсети</h2>
-          <ul class="social__list-nav navigation__list list-reset">
-            <li class="social__item-nav navigation__item">
-              <a class="social__link-nav navigation__link" href="#delivery">доставка</a>
-            </li>
-            <li class="social__item-nav navigation__item">
-              <a class="social__link-nav navigation__link" href="#">гарантия</a>
-            </li>
-            <li class="social__item-nav navigation__item">
-              <a class="social__link-nav navigation__link" href="#contacts">контакты</a>
-            </li>
-          </ul>
+          <div class="social__navigation navigation">
+            <ul class="navigation__list list-reset">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#delivery">доставка</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">гарантия</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#contacts">контакты</a>
+              </li>
+            </ul>
+          </div>
           <ul class="social__list list-reset">
             <li class="social__item">
               <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
