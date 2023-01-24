@@ -1,0 +1,31 @@
+/*для плавной прокрутки у ЯКОРНЫХ ссылок*/
+html {
+  scroll-behavior: smooth;
+}
+
+.popover__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  /* height: 301px; */
+  outline: 1px solid red;
+}
+
+.popover__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+.navigation__catalog {
+  display: none;
+
+}
+
+.js-visible {
+  display: block;
+}

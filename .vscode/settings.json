@@ -1,5 +1,5 @@
 {
-  "editor.renderWhitespace": "selection",
+  "editor.renderWhitespace": "all",
   "files.exclude": {
       "*:Zone.Identifier": true,
       "node_modules/": true
@@ -19,5 +19,6 @@
   "css.lint.unknownVendorSpecificProperties": "warning",
   "css.lint.zeroUnits": "error",
   "html.format.endWithNewline": true,
-  "html.format.indentInnerHtml": true
+  "html.format.indentInnerHtml": true,
+  "liveServer.settings.port": 5502
 }
