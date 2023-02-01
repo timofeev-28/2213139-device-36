@@ -261,6 +261,10 @@ img {
   line-height: 30px;
 }
 
+.contacts__text {
+  font-style: normal;
+}
+
 /* MAILING */
 
 .mailing {
