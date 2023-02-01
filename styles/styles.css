@@ -1,0 +1,368 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --main-font: Rubik, sans-serif;
+  --second-font: Raleway, sans-serif;
+  --black: #000;
+  --white: #fff;
+  --dark-gray: #444;
+  --gray: #dcdcdc;
+  --light: #f0f0f0;
+  --yellow: #ffe17f;
+  --color-background: var(--yellow);
+  --color-text: var(--dark-gray);
+  --color-background-gray: var(--light);
+}
+
+/*GLOBAL*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link-reset {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1190px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.btn {
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--color-text);
+}
+
+/* MAIN-HEADER */
+
+.main-header__navigation {
+  background-color: var(--color-background);
+}
+
+/* временное выделение поповера */
+.popover__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  outline: 1px solid #00ff26;
+  border-radius: 5px;
+}
+
+.popover__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popover__btn {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.navigation__user-search {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.navigation__user-btn {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.navigation__link-user,
+.navigation__link-user-profile {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* выпадашка */
+.navigation__list-catalog {
+  display: none;
+}
+
+.js-visible {
+  display: block;
+}
+
+.navigation__link-catalog {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* HERO */
+
+.slider__term {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.slider__definition {
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.slider__slide {
+  background-color: var(--color-background);
+}
+
+/* PRODUCTS */
+.category__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  background-color: var(--color-background);
+}
+
+.category__title {
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+/* DELIVERY */
+
+.delivery {
+  background-color: var(--color-background-gray);
+}
+
+/* DELIVERY-SPECIAL */
+
+.delivery-special__link {
+  background-color: var(--color-background-gray);
+}
+
+.delivery-special__title {
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ABOUT */
+
+.about__item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.contacts__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.contacts__text {
+  font-style: normal;
+}
+
+/* MAILING */
+
+.mailing {
+  background-color: var(--color-background-gray);
+}
+
+/* MAIN-FOOTER */
+
+.main-footer {
+  background-color: var(--color-text);
+}
+
+.main-footer__address-text {
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+  color: var(--white);
+}
+
+.main-footer__navigation {
+  color: var(--white);
+}
+
+.main-footer__address-link {
+  font-style: normal;
+  color: var(--white);
+}
+
+/* CATALOG-PAGE */
+
+.form__title,
+.catalog__sorting-title {
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.form__subtitle {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.form__range-label {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form__range-from,
+.form__range-before {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form__label {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.catalog__sorting-select {
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+}
+
+.products__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.products__price {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.products__link-download {
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.products__link-btn {
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}

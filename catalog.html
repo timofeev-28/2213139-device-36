@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="images/index/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="images/favicons/favicon.png" type="image/x-icon">
   </head>
 
   <body>
@@ -21,28 +21,32 @@
                 aria-label="Поле для поиска по сайту">
               <button class="navigation__user-btn btn-reset" type="submit">Найти</button>
             </form>
-            <a class="navigation__link-user-profile" href="#">Коля Петухов</a>
+            <a class="navigation__link-user-profile link-reset link-reset" href="#">Коля Петухов</a>
             <ul class="navigation__list-user list-reset">
               <li class="navigation__item-user">
-                <a class="navigation__link-user navigation__link-user--entrance" href="#">Войти</a>
+                <a class="navigation__link-user navigation__link-user--entrance link-reset" href="#">Войти</a>
               </li>
               <li class="navigation__item-user">
-                <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
+                <a class="navigation__link-user navigation__link-user--compare link-reset" href="#">Сравнить</a>
               </li>
               <li class="navigation__item-user navigation__popover popover">
                 <span class="navigation__basket-quantity"></span>
-                <a class="navigation__link-user navigation__link-user--basket btn-reset" href="#">Корзина</a>
-                <!-- ПОПОВЕР (я знаю только про тултипы, может это одно и то-же? :) -->
+                <a class="navigation__link-user navigation__link-user--basket btn-reset link-reset" href="#">Корзина</a>
+                <!-- ПОПОВЕР -->
                 <div class="popover__wrap ">
                   <ul class="popover__list list-reset">
                     <li class="popover__item">
-                      <img class="popover__img" src="images/index/header-amateur-selfie-stick.jpg" width="39" height="43" alt="Любительская селфи-палка.">
-                      <span class="popover__text">Любительская селфи-палка</span>
+                      <a class="popover__link link-reset" href="#">
+                        <img class="popover__img" src="images/index/header-amateur-selfie-stick.jpg" width="39" height="43" alt="Любительская селфи-палка.">
+                        <span class="popover__text">Любительская селфи-палка</span>
+                      </a>
                       <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
                     </li>
                     <li class="popover__item">
-                      <img class="popover__img" src="images/index/header-professional-selfie-stick.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
-                      <span class="popover__text">Профессиональная селфи-палка</span>
+                      <a class="popover__link link-reset" href="#">
+                        <img class="popover__img" src="images/index/header-professional-selfie-stick.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
+                        <span class="popover__text">Профессиональная селфи-палка</span>
+                      </a>
                       <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
                     </li>
                   </ul>
@@ -50,43 +54,43 @@
                     <p class="popover__products"><span class="visually-hidden">В корзине</span>Товаров: 2</p>
                     <p class="popover__amount">Сумма: 2000&nbsp;₽</p>
                   </div>
-                  <a class="popover__btn btn-reset" href="#">Открыть корзину</a>
+                  <a class="popover__btn link-reset" href="#">Открыть корзину</a>
                 </div>
               </li>
             </ul>
           </div>
           <ul class="navigation__list list-reset">
             <li class="navigation__item navigation__item--btn">
-              <button class="navigation__link btn-reset navigation__link--js">Каталог товаров</button>
+              <button class="navigation__link btn btn-reset navigation__link--js">Каталог товаров</button>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#delivery">Доставка</a>
+              <a class="navigation__link btn" href="#delivery">Доставка</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Гарантия</a>
+              <a class="navigation__link btn" href="#">Гарантия</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#contacts">Контакты</a>
+              <a class="navigation__link btn" href="#contacts">Контакты</a>
             </li>
           </ul>
-          <ul class="navigation__catalog">
-            <li>
-              <a class="navigation__link-catalog" href="#">Виртуальная реальность</a>
+          <ul class="navigation__list-catalog list-reset">
+            <li class="navigation__item-catalog">
+              <a class="navigation__link-catalog link-reset" href="#">Виртуальная реальность</a>
             </li>
-            <li>
-              <a class="navigation__link-catalog" href="#">Моноподы для cелфи</a>
+            <li class="navigation__item-catalog">
+              <a class="navigation__link-catalog link-reset" href="#">Моноподы для cелфи</a>
             </li>
-            <li>
-              <a class="navigation__link-catalog" href="#">Экшн-камеры</a>
+            <li class="navigation__item-catalog">
+              <a class="navigation__link-catalog link-reset" href="#">Экшн-камеры</a>
             </li>
-            <li>
-              <a class="navigation__link-catalog" href="#">Фитнес-браслеты</a>
+            <li class="navigation__item-catalog">
+              <a class="navigation__link-catalog link-reset" href="#">Фитнес-браслеты</a>
             </li>
-            <li>
-              <a class="navigation__link-catalog" href="#">Умные часы</a>
+            <li class="navigation__item-catalog">
+              <a class="navigation__link-catalog link-reset" href="#">Умные часы</a>
             </li>
-            <li>
-              <a class="navigation__link-catalog" href="#">Квадрокоптеры</a>
+            <li class="navigation__item-catalog">
+              <a class="navigation__link-catalog link-reset" href="#">Квадрокоптеры</a>
             </li>
           </ul>
         </nav>
@@ -98,11 +102,17 @@
 
         <header class="catalog-header">
           <div class="container">
-            <h2 class="catalog-header__title">Моноподы для селфи</h2>
-            <ul class="catalog-header__list list-reset">
-              <li class="catalog-header__item">Главная</li>
-              <li class="catalog-header__item">Каталог товаров</li>
-              <li class="catalog-header__item">Моноподы для селфи</li>
+            <h2 class="catalog-header__title title">Моноподы для селфи</h2>
+            <ul class="catalog-header__list breadcrumbs list-reset">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link link-reset" href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link link-reset" href="index.html">Каталог товаров</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link link-reset" href="index.html">Моноподы для селфи</a>
+              </li>
             </ul>
           </div>
         </header>
@@ -118,9 +128,9 @@
                   <div class="form__range-row"></div>
                   <button class="form__range-btn btn-reset" type="button"><span class="visually-hidden">Кнопка минимум</span></button>
                   <button class="form__range-btn btn-reset" type="button"><span class="visually-hidden">Кнопка максимум</span></button>
-                  <label for="from">от</label>
+                  <label class="form__range-label" for="from">от</label>
                   <input class="form__range-from" type="text" id="from" value="0">
-                  <label for="before">до</label>
+                  <label class="form__range-label" for="before">до</label>
                   <input class="form__range-before" type="text" id="before" value="5000">
                 </div>
               </fieldset>
@@ -128,41 +138,41 @@
                 <legend class="form__subtitle">Цвет</legend>
                 <ul class="form__list list-reset">
                   <li class="form__item">
-                    <input class="form__item" type="checkbox" id="black" name="color-black" checked>
-                    <label for="black">Чёрный</label>
+                    <input class="form__check" type="checkbox" id="black" name="color-black" checked>
+                    <label class="form__label" for="black">Чёрный</label>
                   </li>
                   <li class="form__item">
-                    <input class="form__item" type="checkbox" id="white" name="color-white" checked>
-                    <label for="white">Белый</label>
+                    <input class="form__check" type="checkbox" id="white" name="color-white" checked>
+                    <label class="form__label" for="white">Белый</label>
                   </li>
                   <li class="form__item">
-                    <input class="form__item" type="checkbox" id="blue" name="color-blue">
-                    <label for="blue">Синий</label>
+                    <input class="form__check" type="checkbox" id="blue" name="color-blue">
+                    <label class="form__label" for="blue">Синий</label>
                   </li>
                   <li class="form__item">
-                    <input class="form__item" type="checkbox" id="red" name="color-red">
-                    <label for="red">Красный</label>
+                    <input class="form__check" type="checkbox" id="red" name="color-red">
+                    <label class="form__label" for="red">Красный</label>
                   </li>
                   <li class="form__item">
-                    <input class="form__item" type="checkbox" id="pink" name="color-pink">
-                    <label for="pink">Розовый</label>
+                    <input class="form__check" type="checkbox" id="pink" name="color-pink">
+                    <label class="form__label" for="pink">Розовый</label>
                   </li>
                 </ul>
               </fieldset>
               <fieldset>
                 <legend class="form__subtitle">Bluetooth</legend>
-                <ul class="form__list">
+                <ul class="form__list list-reset">
                   <li class="form__item">
-                    <input class="form__item" type="radio" id="yes" name="Bluetooth" value="yes" checked>
-                    <label for="yes">Есть</label>
+                    <input class="form__radio" type="radio" id="yes" name="Bluetooth" value="yes" checked>
+                    <label class="form__label" for="yes">Есть</label>
                   </li>
                   <li class="form__item">
-                    <input class="form__item" type="radio" id="no" name="Bluetooth" value="no">
-                    <label for="no">Нет</label>
+                    <input class="form__radio" type="radio" id="no" name="Bluetooth" value="no">
+                    <label class="form__label" for="no">Нет</label>
                   </li>
                 </ul>
               </fieldset>
-              <button class="form-btn btn-reset" type="submit">Показать</button>
+              <button class="form-btn btn btn-reset" type="submit">Показать</button>
             </form>
             <div class="catalog__sorting">
               <p class="catalog__sorting-title">Сортировка:</p>
@@ -182,54 +192,54 @@
             <div class="catalog__products products">
               <ul class="products__list list-reset">
                 <li class="products__item">
-                  <a href="#" class="products__link">
+                  <a class="products__link link-reset" href="#">
                     <img class="products__image" src="images/catalog/catalog-amateur-selfie-stick.jpg" width="360" height="380" alt="Любительская селфи-палка.">
                     <h3 class="products__title">Любительская селфи-палка</h3>
-                    <span class="products__price">1&nbsp;500&nbsp;₽</span>
+                    <span class="products__price">500&nbsp;₽</span>
                   </a>
                 </li>
                 <li class="products__item">
-                  <a href="#" class="products__link">
+                  <a class="products__link link-reset" href="#">
                     <img class="products__image" src="images/catalog/catalog-professional-selfie-stick.jpg" width="360" height="380" alt="Профессиональная селфи-палка.">
                     <h3 class="products__title">Профессиональная селфи-палка</h3>
                     <span class="products__price">1&nbsp;500&nbsp;₽</span>
                   </a>
                 </li>
                 <li class="products__item">
-                  <a href="#" class="products__link">
+                  <a class="products__link link-reset" href="#">
                     <img class="products__image" src="images/catalog/catalog-unsinkable-selfie-stick.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
                     <h3 class="products__title">Непотопляемая селфи-палка</h3>
-                    <span class="products__price">1&nbsp;500&nbsp;₽</span>
+                    <span class="products__price">2&nbsp;500&nbsp;₽</span>
                   </a>
                 </li>
                 <li class="products__item">
-                  <a href="#" class="products__link">
+                  <a class="products__link link-reset" href="#">
                     <img class="products__image" src="images/catalog/catalog-selfie-stick-follow-me.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной.">
                     <h3 class="products__title">Селфи-палка «Следуй за мной»</h3>
                     <span class="products__price">1&nbsp;500&nbsp;₽</span>
                   </a>
                 </li>
               </ul>
-              <a class="products__link" href="#">Загрузить ещё</a>
-              <a class="products__link-btn products__link-nav--disabled" href="#">Назад</a>
-              <ul class="products__list-nav">
+              <a class="products__link-download link-reset" href="#">Загрузить ещё</a>
+              <a class="products__link-btn products__link-btn--disabled link-reset" href="#">Назад</a>
+              <ul class="products__list-nav list-reset">
                 <li class="products__item-nav">
-                  <a class="products__link-nav" href="#">1</a>
+                  <a class="products__link-nav link-reset" href="#">1</a>
                 </li>
                 <li class="products__item-nav">
-                  <a class="products__link-nav" href="#">2</a>
+                  <a class="products__link-nav link-reset" href="#">2</a>
                 </li>
                 <li class="products__item-nav">
-                  <a class="products__link-nav" href="#">3</a>
+                  <a class="products__link-nav link-reset" href="#">3</a>
                 </li>
                 <li class="products__item-nav">
-                  <a class="products__link-nav products__link-nav--points">...</a>
+                  <a class="products__link-nav products__link-nav--points link-reset">...</a>
                 </li>
                 <li class="products__item-nav">
-                  <a class="products__link-nav" href="#">15</a>
+                  <a class="products__link-nav link-reset" href="#">15</a>
                 </li>
               </ul>
-              <a class="products__link-btn" href="#">Вперёд</a>
+              <a class="products__link-btn link-reset" href="#">Вперёд</a>
             </div>
           </div>
         </section>
@@ -237,7 +247,7 @@
 
       <footer class="main-footer">
         <div class="container">
-          <a class="main-footer__logo" href="#logo">
+          <a class="main-footer__logo" href="index.html">
             <img src="images/index/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
           </a>
           <address class="main-footer__address main-footer__address-descr">
@@ -247,41 +257,51 @@
           <div class="main-footer__navigation navigation">
             <ul class=" navigation__list list-reset">
               <li class="navigation__item">
-                <a class="navigation__link" href="#delivery">Доставка</a>
+                <a class="navigation__link btn" href="#delivery">Доставка</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Гарантия</a>
+                <a class="navigation__link btn" href="#">Гарантия</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#contacts">Контакты</a>
+                <a class="navigation__link btn" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
           <ul class="main-footer__social social-list list-reset">
             <li class="social-list__item">
               <a class="social-list__link" href="https://t.me/htmlacademy">
-                <img src="#" alt="Иконка соцсети Телеграм">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
-                <img src="#" alt="Иконка соцсети Ютуб">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="https://twitter.com/htmlacademy_ru">
-                <img src="#" alt="Иконка соцсети Твиттер">
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
           </ul>
           <address class="main-footer__address main-footer__address-tel">
-            <a class="main-footer__address__tel" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+            <a class="main-footer__address-link link-reset" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
           </address>
           <a class="main-footer__logo-academy" href="https://htmlacademy.ru/">
-            <img src="images/index/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTML-Академии.">
+            <svg width="115" height="33" viewBox="0 0 115 33" role="img" aria-label="Логотип HTML-Академии, изготовителя сайта." fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700"/>
+              <path d="M11.6 4.5C10 4.5 8.8 5.2 8 6.2H7.9V0H5.9V15.5H7.9V10.2C7.9 8.1 9.2 6.6 11.2 6.6C13 6.6 14.1 8 14.1 9.8V15.5H16.1V9.4C16.2 6.4 14.3 4.5 11.6 4.5Z" fill="#FFC700"/>
+              <path d="M26.6 4.8H21.8V1.1H19.8V4.9H17.9V6.9H19.8V12.9C19.8 14.6 20.8 15.6 22.5 15.6H26.6V13.6H22.9C22.2 13.6 21.8 13.2 21.8 12.5V6.8H26.6V4.8Z" fill="#FFC700"/>
+              <path d="M41.1 4.6C39.5 4.6 38.2 5.4 37.6 6.7H37.5C36.9 5.5 35.7 4.6 34.1 4.6C32.7 4.6 31.6 5.4 31 6.4H30.9V4.8H29V15.4H31V10C31 8 32 6.5 33.6 6.5C35.1 6.5 36 7.5 36 9.1V15.4H38V9.8C38 7.4 39.4 6.5 40.6 6.5C42.1 6.5 43 7.5 43 9.1V15.4H45V8.9C45.1 6.4 43.6 4.6 41.1 4.6Z" fill="#FFC700"/>
+              <path d="M47.8 12.7C47.8 14.4 48.8 15.4 50.6 15.4H52.6V13.4H50.9C50.2 13.4 49.8 13 49.8 12.3V0H47.8V12.7Z" fill="#FFC700"/>
+              <path d="M28.9 19.7C28 18.6 26.7 17.9 25 17.9C21.9 17.9 19.6 20.2 19.6 23.5C19.6 26.8 21.9 29.1 25 29.1C26.8 29.1 28 28.3 28.8 27.2H28.9V28.8H30.9V18.2H28.9V19.7ZM25.3 27.1C23.1 27.1 21.7 25.5 21.7 23.5C21.7 21.5 23.1 19.9 25.3 19.9C27.5 19.9 28.9 21.5 28.9 23.5C28.9 25.4 27.5 27.1 25.3 27.1Z" fill="#FFC700"/>
+              <path d="M44.2 22C43.7 19.6 41.6 17.9 38.8 17.9C35.4 17.9 33.2 20.4 33.2 23.5C33.2 26.6 35.4 29.1 38.8 29.1C41.6 29.1 43.7 27.3 44.2 24.9H42.1C41.7 26.2 40.4 27.2 38.8 27.2C36.6 27.2 35.2 25.6 35.2 23.6C35.2 21.6 36.6 20 38.8 20C40.4 20 41.6 21 42.1 22.2H44.2V22Z" fill="#FFC700"/>
+              <path d="M55.1 19.7C54.2 18.6 52.9 17.9 51.2 17.9C48.1 17.9 45.8 20.2 45.8 23.5C45.8 26.8 48.1 29.1 51.2 29.1C53 29.1 54.2 28.3 55 27.2H55.1V28.8H57.1V18.2H55.1V19.7ZM51.5 27.1C49.3 27.1 47.9 25.5 47.9 23.5C47.9 21.5 49.3 19.9 51.5 19.9C53.7 19.9 55.1 21.5 55.1 23.5C55.1 25.4 53.6 27.1 51.5 27.1Z" fill="#FFC700"/>
+              <path d="M68.7 19.8C67.8 18.7 66.5 17.9 64.8 17.9C61.7 17.9 59.4 20.2 59.4 23.5C59.4 26.8 61.6 29.1 64.8 29.1C66.5 29.1 67.8 28.3 68.6 27.3H68.7V28.8H70.7V13.4H68.7V19.8ZM65.1 27.1C62.9 27.1 61.5 25.5 61.5 23.5C61.5 21.5 62.9 19.9 65.1 19.9C67.3 19.9 68.7 21.5 68.7 23.5C68.6 25.5 67.2 27.1 65.1 27.1Z" fill="#FFC700"/>
+              <path d="M78.3 17.9C75 17.9 72.8 20.4 72.8 23.5C72.8 26.5 74.9 29.1 78.3 29.1C80.8 29.1 82.8 27.8 83.5 25.5H81.4C80.9 26.5 79.8 27.1 78.4 27.1C76.5 27.1 75.1 25.8 75 24.2H83.8C84 20.6 81.8 17.9 78.3 17.9ZM78.3 19.8C80 19.8 81.3 20.8 81.6 22.4H75.1C75.4 20.9 76.6 19.8 78.3 19.8Z" fill="#FFC700"/>
+              <path d="M98.2 17.9C96.6 17.9 95.3 18.7 94.6 19.9H94.5C93.9 18.7 92.7 17.9 91.1 17.9C89.7 17.9 88.6 18.6 88 19.7V18.2H86.1V28.8H88.1V23.4C88.1 21.4 89.1 20 90.7 19.9C92.2 19.9 93.1 20.9 93.1 22.5V28.8H95.1V23.2C95.1 20.8 96.5 19.9 97.7 19.9C99.2 19.9 100.1 20.9 100.1 22.5V28.8H102.1V22.3C102.2 19.7 100.7 17.9 98.2 17.9Z" fill="#FFC700"/>
+              <path d="M109.4 27L105.8 18.1H103.6L108.4 29.7C108.1 30.6 107.7 30.9 106.7 30.9H104.2V32.9H106.7C108.5 32.9 109.5 32.1 110.2 30.3L114.9 18.1H112.8L109.4 27Z" fill="#FFC700"/>
+            </svg>
           </a>
         </div>
       </footer>
