@@ -617,6 +617,7 @@ img {
 
 .breadcrumbs {
   display: flex;
+  margin-bottom: 34px;
 }
 
 .breadcrumbs__item:not(:last-child) {
@@ -675,6 +676,10 @@ img {
 .form__label {
   font-size: 16px;
   line-height: 20px;
+}
+
+.form__btn {
+  margin-top: 30px;
 }
 
 .catalog__products {
