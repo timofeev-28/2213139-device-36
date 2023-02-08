@@ -10,19 +10,19 @@
 
   <body>
     <header class="page-header">
-      <div class="container container-page-header">
-        <div class="page-header__container">
-          <a class="page-header__logo" href="index.html">
-            <img class="page-header__logo-img" src="images/index/logo-header.svg" width="145" height="36" alt="Логотип магазина Девайс.">
+      <div class="container container-header">
+        <div class="header__container">
+          <a class="header__logo" href="index.html">
+            <img class="header__logo-img" src="images/index/logo-header.svg" width="145" height="36" alt="Логотип магазина Девайс.">
           </a>
-          <nav class="page-header__navigation navigation">
+          <nav class="header__navigation navigation">
             <div class="navigation__user">
               <form class="navigation__form search-form" action="https://echo.htmlacademy.ru/" method="get">
                 <label class="visually-hidden" for="search">Поле для поиска по сайту</label>
                 <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
                 <button class="search-form__btn" type="submit">Найти</button>
               </form>
-              <ul class="navigation__list-user list-reset">
+              <ul class="navigation__list-user">
                 <li class="navigation__item-user navigation__item-user--entrance">
                   <a class="navigation__link-user navigation__link-user--entrance link-reset" href="#">Коля Петухов</a>
                 </li>
@@ -37,7 +37,7 @@
                   <a class="navigation__link-user navigation__link-user--basket link-reset" href="#">Корзина</a>
                   <!-- ПОПОВЕР -->
                   <div class="popover__wrap ">
-                    <ul class="popover__list list-reset">
+                    <ul class="popover__list">
                       <li class="popover__item">
                         <a class="popover__link link-reset" href="#">
                           <img class="popover__img" src="images/index/header-amateur-selfie-stick.jpg" width="39" height="43" alt="Любительская селфи-палка.">
@@ -62,7 +62,7 @@
                 </li>
               </ul>
             </div>
-            <ul class="navigation__list list-reset">
+            <ul class="navigation__list">
               <li class="navigation__item navigation__item--btn">
                 <button class="navigation__link btn btn-reset navigation__link--js">Каталог товаров</button>
               </li>
@@ -76,7 +76,7 @@
                 <a class="navigation__link btn" href="#contacts">Контакты</a>
               </li>
             </ul>
-            <ul class="navigation__list-catalog list-reset">
+            <ul class="navigation__list-catalog">
               <li class="navigation__item-catalog">
                 <a class="navigation__link-catalog link-reset" href="#">Виртуальная реальность</a>
               </li>
@@ -103,8 +103,8 @@
     </header>
 
       <main class="main">
-        <h1 class="main-header__title title container main-gap-left">Моноподы для селфи</h1>
-        <ul class="main-header__list breadcrumbs container main-gap-left">
+        <h1 class="main__title title container main-gap-left">Моноподы для селфи</h1>
+        <ul class="main__list breadcrumbs container main-gap-left">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
           </li>
@@ -134,7 +134,7 @@
               </fieldset>
               <fieldset>
                 <legend class="form__subtitle">Цвет</legend>
-                <ul class="form__list list-reset">
+                <ul class="form__list">
                   <li class="form__item">
                     <input class="form__check" type="checkbox" id="black" name="color-black" checked>
                     <label class="form__label" for="black">Чёрный</label>
@@ -159,7 +159,7 @@
               </fieldset>
               <fieldset>
                 <legend class="form__subtitle">Bluetooth</legend>
-                <ul class="form__list list-reset">
+                <ul class="form__list">
                   <li class="form__item">
                     <input class="form__radio" type="radio" id="yes" name="Bluetooth" value="yes" checked>
                     <label class="form__label" for="yes">Есть</label>
@@ -189,7 +189,7 @@
                 </a>
               </div>
               <div class="products__wrap">
-                <ul class="products__list list-reset">
+                <ul class="products__list">
                   <li class="products__item">
                     <a class="products__link" href="#">
                       <img class="products__image" src="images/catalog/catalog-amateur-selfie-stick.jpg" width="360" height="380" alt="Любительская селфи-палка.">
@@ -222,7 +222,7 @@
                 <a class="products__link-download" href="#">Загрузить ещё</a>
                 <div class="products__wrap-pagination">
                   <a class="products__link-btn products__link-btn--disabled link-reset" href="#">Назад</a>
-                  <ul class="products__list-nav list-reset">
+                  <ul class="products__list-nav">
                     <li class="products__item-nav">
                       <a class="products__link-nav" href="#">1</a>
                     </li>
@@ -247,29 +247,29 @@
         </section>
       </main>
 
-      <footer class="main-footer">
-        <div class="container main-footer-container">
-          <div class="main-footer__wrap-logo">
-            <a class="main-footer__logo" href="index.html">
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer__wrap-logo">
+            <a class="footer__logo" href="index.html">
               <img src="images/index/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
             </a>
-            <address class="main-footer__address main-footer__address-descr">
-              <p class="main-footer__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+            <address class="footer__address footer__address-descr">
+              <p class="footer__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
             </address>
           </div>
-          <div class="main-footer__wrap-nav">
-            <ul class="main-footer__list list-reset">
-              <li class="main-footer__item">
-                <a class="main-footer__link btn" href="#delivery">Доставка</a>
+          <div class="footer__wrap-nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link btn" href="#delivery">Доставка</a>
               </li>
-              <li class="main-footer__item">
-                <a class="main-footer__link btn" href="#">Гарантия</a>
+              <li class="footer__item">
+                <a class="footer__link btn" href="#">Гарантия</a>
               </li>
-              <li class="main-footer__item">
-                <a class="main-footer__link btn" href="#contacts">Контакты</a>
+              <li class="footer__item">
+                <a class="footer__link btn" href="#contacts">Контакты</a>
               </li>
             </ul>
-            <ul class="main-footer__social social-list list-reset">
+            <ul class="footer__social social-list">
               <li class="social-list__item">
                 <a class="social-list__link" href="https://t.me/htmlacademy">
                   <span class="visually-hidden">Телеграм</span>
@@ -287,11 +287,11 @@
               </li>
             </ul>
           </div>
-          <div class="main-footer__wrap-contacts-academy">
-            <address class="main-footer__address">
-              <a class="main-footer__address-link link-reset" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+          <div class="footer__wrap-contacts-academy">
+            <address class="footer__address">
+              <a class="footer__address-link link-reset" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
             </address>
-            <a class="main-footer__logo-academy" href="https://htmlacademy.ru/">
+            <a class="footer__logo-academy" href="https://htmlacademy.ru/">
               <svg width="115" height="33" viewBox="0 0 115 33" role="img" aria-label="Логотип HTML-Академии, изготовителя сайта." fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700"/>
                 <path d="M11.6 4.5C10 4.5 8.8 5.2 8 6.2H7.9V0H5.9V15.5H7.9V10.2C7.9 8.1 9.2 6.6 11.2 6.6C13 6.6 14.1 8 14.1 9.8V15.5H16.1V9.4C16.2 6.4 14.3 4.5 11.6 4.5Z" fill="#FFC700"/>

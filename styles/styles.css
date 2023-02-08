@@ -82,17 +82,6 @@ img {
   cursor: pointer;
 }
 
-/* .list-reset {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-} */
-
-/* .link-reset {
-  text-decoration: none;
-  color: inherit;
-} */
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -135,24 +124,24 @@ img {
   color: var(--color-text);
 }
 
-/* PAGE-HEADER */
+/* HEADER */
 
-.container-page-header {
+.container-header {
   margin-bottom: 35px;
   padding-top: 40px;
 }
 
-.page-header__container {
+.header__container {
   padding: 0 60px 15px;
   background-color: var(--color-background);
 }
 
-.page-header__logo {
+.header__logo {
   display: block;
   transform: translateY(-21px);
 }
 
-.page-header__logo-img{
+.header__logo-img{
   display: block;
 }
 
@@ -607,33 +596,33 @@ img {
   margin-right: auto;
 }
 
-/* MAIN-FOOTER */
+/* FOOTER */
 
-.main-footer {
+.footer {
   background-color: var(--color-text);
 }
 
-.main-footer-container {
+.footer-container {
   display: flex;
   justify-content: space-between;
   padding-top: 62px;
   padding-bottom: 62px;
 }
 
-.main-footer__wrap-logo {
+.footer__wrap-logo {
   display: flex;
   flex-direction: column;
   width: 239px;
 }
 
-.main-footer__wrap-nav {
+.footer__wrap-nav {
   display: flex;
   flex-direction: column;
   margin-right: 58px;
   padding-top: 75px;
 }
 
-.main-footer__list {
+.footer__list {
   display: flex;
   align-items: center;
   margin: 0;
@@ -642,19 +631,19 @@ img {
   color: var(--white);
 }
 
-.main-footer__wrap-contacts-academy {
+.footer__wrap-contacts-academy {
   width: 175px;
   padding-top: 75px;
 }
 
-.main-footer__address-text {
+.footer__address-text {
   font-size: 16px;
   line-height: 20px;
   font-style: normal;
   color: var(--white);
 }
 
-.main-footer__address-link {
+.footer__address-link {
   display: inline-block;
   margin-bottom: 63px;
   font-style: normal;
@@ -664,36 +653,34 @@ img {
   color: var(--white);
 }
 
-.main-footer__logo-academy {
+.footer__logo-academy {
   display: block;
   text-align: end;
 }
 
-.main-footer__social {
+.footer__social {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 
 /* CATALOG-PAGE */
-/* page-header */
+/* header */
 
 .navigation__link-user--disabled {
   margin-right: 20px;
   opacity: 0.3;
 }
 
-/* MAIN-HEADER */
-
 .main-gap-left {
   padding-left: 60px;
 }
 
-.main-header__title {
+.main__title {
   margin-bottom: 16px;
 }
 
-.main-header__list {
+.main__list {
   list-style: none;
   margin-top: 0;
 }
