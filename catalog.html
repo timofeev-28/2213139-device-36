@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <header class="page-header">
-      <div class="container container-header">
-        <div class="header__container">
+    <header class="header">
+      <div class="container">
+        <div class="header__container-catalog">
           <a class="header__logo" href="index.html">
             <img class="header__logo-img" src="images/index/logo-header.svg" width="145" height="36" alt="Логотип магазина Девайс.">
           </a>
@@ -24,17 +24,17 @@
               </form>
               <ul class="navigation__list-user">
                 <li class="navigation__item-user navigation__item-user--entrance">
-                  <a class="navigation__link-user navigation__link-user--entrance link-reset" href="#">Коля Петухов</a>
+                  <a class="navigation__link-user navigation__link-user--entrance" href="#">Коля Петухов</a>
                 </li>
                 <li class="navigation__item-user">
-                  <a class="navigation__link-user navigation__link-user--disabled link-reset">Войти</a>
+                  <a class="navigation__link-user navigation__link-user--disabled">Войти</a>
                 </li>
                 <li class="navigation__item-user navigation__item-user--compare">
-                  <a class="navigation__link-user navigation__link-user--compare link-reset" href="#">Сравнить</a>
+                  <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
                 </li>
                 <li class="navigation__item-user navigation__popover popover">
                   <span class="navigation__basket-quantity">2</span>
-                  <a class="navigation__link-user navigation__link-user--basket link-reset" href="#">Корзина</a>
+                  <a class="navigation__link-user navigation__link-user--basket" href="#">Корзина</a>
                   <!-- ПОПОВЕР -->
                   <div class="popover__wrap ">
                     <ul class="popover__list">
@@ -64,7 +64,7 @@
             </div>
             <ul class="navigation__list">
               <li class="navigation__item navigation__item--btn">
-                <button class="navigation__link btn btn-reset navigation__link--js">Каталог товаров</button>
+                <button class="navigation__link btn btn-reset">Каталог товаров</button>
               </li>
               <li class="navigation__item">
                 <a class="navigation__link btn" href="#delivery">Доставка</a>
@@ -76,13 +76,13 @@
                 <a class="navigation__link btn" href="#contacts">Контакты</a>
               </li>
             </ul>
+            <!-- ВЫПАДАШКА -->
             <ul class="navigation__list-catalog">
               <li class="navigation__item-catalog">
                 <a class="navigation__link-catalog link-reset" href="#">Виртуальная реальность</a>
               </li>
               <li class="navigation__item-catalog">
-                <!-- ссылка временная, адрес у страницы с моноподами другой -->
-                <a class="navigation__link-catalog navigation__link-catalog--outline link-reset" href="catalog.html">Моноподы для cелфи</a>
+                <a class="navigation__link-catalog navigation__link-catalog--outline link-reset" href="#">Моноподы для cелфи</a>
               </li>
               <li class="navigation__item-catalog">
                 <a class="navigation__link-catalog link-reset" href="#">Экшн-камеры</a>
@@ -103,8 +103,8 @@
     </header>
 
       <main class="main">
-        <h1 class="main__title title container main-gap-left">Моноподы для селфи</h1>
-        <ul class="main__list breadcrumbs container main-gap-left">
+        <h1 class="main__title title container">Моноподы для селфи</h1>
+        <ul class="main__list breadcrumbs container">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
           </li>
@@ -117,7 +117,7 @@
         </ul>
         <section class="catalog">
           <h2 class="visually-hidden">Каталог с выбором товаров</h2>
-          <div class="container main-gap-left catalog__container">
+          <div class="container catalog__container">
             <form class="catalog__filter-group form" action="https://echo.htmlacademy.ru/" method="get">
               <p class="form__title">Фильтр:</p>
               <fieldset>
@@ -193,29 +193,37 @@
                   <li class="products__item">
                     <a class="products__link" href="#">
                       <img class="products__image" src="images/catalog/catalog-amateur-selfie-stick.jpg" width="360" height="380" alt="Любительская селфи-палка.">
-                      <h3 class="products__title">Любительская селфи-палка</h3>
-                      <span class="products__price">500&nbsp;₽</span>
+                      <div class="products__wrap-price">
+                        <h3 class="products__title products__title--amateur">Любительская селфи-палка</h3>
+                        <span class="products__price">500&nbsp;₽</span>
+                      </div>
                     </a>
                   </li>
                   <li class="products__item">
                     <a class="products__link" href="#">
                       <img class="products__image" src="images/catalog/catalog-professional-selfie-stick.jpg" width="360" height="380" alt="Профессиональная селфи-палка.">
-                      <h3 class="products__title">Профессиональная селфи-палка</h3>
-                      <span class="products__price">1&nbsp;500&nbsp;₽</span>
+                      <div class="products__wrap-price">
+                        <h3 class="products__title">Профессиональная селфи-палка</h3>
+                        <span class="products__price">1&nbsp;500&nbsp;₽</span>
+                      </div>
                     </a>
                   </li>
                   <li class="products__item">
                     <a class="products__link" href="#">
                       <img class="products__image" src="images/catalog/catalog-unsinkable-selfie-stick.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
-                      <h3 class="products__title">Непотопляемая селфи-палка</h3>
-                      <span class="products__price">2&nbsp;500&nbsp;₽</span>
+                      <div class="products__wrap-price">
+                        <h3 class="products__title products__title--unsinkable">Непотопляемая селфи-палка</h3>
+                        <span class="products__price">2&nbsp;500&nbsp;₽</span>
+                      </div>
                     </a>
                   </li>
                   <li class="products__item">
                     <a class="products__link" href="#">
                       <img class="products__image" src="images/catalog/catalog-selfie-stick-follow-me.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной.">
-                      <h3 class="products__title">Селфи-палка «Следуй за мной»</h3>
-                      <span class="products__price">1&nbsp;500&nbsp;₽</span>
+                      <div class="products__wrap-price">
+                        <h3 class="products__title">Селфи-палка «Следуй за мной»</h3>
+                        <span class="products__price">1&nbsp;500&nbsp;₽</span>
+                      </div>
                     </a>
                   </li>
                 </ul>
@@ -251,7 +259,7 @@
         <div class="container footer-container">
           <div class="footer__wrap-logo">
             <a class="footer__logo" href="index.html">
-              <img src="images/index/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
+              <img class="footer__image-logo" src="images/index/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
             </a>
             <address class="footer__address footer__address-descr">
               <p class="footer__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>

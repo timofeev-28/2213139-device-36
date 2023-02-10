@@ -9,100 +9,103 @@
   </head>
 
   <body>
-    <header class="header">
+    <div class="wrap-header">
       <div class="container container-header">
-        <div class="header__container">
-          <a class="header__logo" id="logo">
-            <img class="header__logo-img" src="images/index/logo-header.svg" width="145" height="36" alt="Логотип магазина Девайс.">
-          </a>
-          <nav class="header__navigation navigation">
-            <div class="navigation__user">
-              <form class="navigation__form search-form" action="https://echo.htmlacademy.ru/" method="get">
-                <label class="visually-hidden" for="search">Поле для поиска по сайту</label>
-                <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
-                <button class="search-form__btn" type="submit">Найти</button>
-              </form>
-              <ul class="navigation__list-user">
-                <li class="navigation__item-user navigation__item-user--entrance">
-                  <a class="navigation__link-user navigation__link-user--entrance" href="#">Войти</a>
-                </li>
-                <li class="navigation__item-user navigation__item-user--compare">
-                  <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
-                </li>
-                <li class="navigation__item-user navigation__popover popover">
-                  <span class="navigation__basket-quantity">2</span>
-                  <a class="navigation__link-user navigation__link-user--basket" href="#">Корзина</a>
-                  <!-- ПОПОВЕР -->
-                  <div class="popover__wrap ">
-                    <ul class="popover__list">
-                      <li class="popover__item">
-                        <a class="popover__link link-reset" href="#">
-                          <img class="popover__img" src="images/index/header-amateur-selfie-stick.jpg" width="39" height="43" alt="Любительская селфи-палка.">
-                          <span class="popover__text">Любительская селфи-палка</span>
-                        </a>
-                        <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
-                      </li>
-                      <li class="popover__item">
-                        <a class="popover__link link-reset" href="#">
-                          <img class="popover__img" src="images/index/header-professional-selfie-stick.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
-                          <span class="popover__text">Профессиональная селфи-палка</span>
-                        </a>
-                        <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
-                      </li>
-                    </ul>
-                    <div class="popover__total">
-                      <p class="popover__products"><span class="visually-hidden">В корзине</span>Товаров: 2</p>
-                      <p class="popover__amount">Сумма: 2000&nbsp;₽</p>
-                    </div>
-                    <a class="popover__btn link-reset" href="#">Открыть корзину</a>
-                  </div>
-                </li>
-              </ul>
+        <header class="header-index">
+            <div class="header-index__container">
+              <a class="header-index__logo" id="logo">
+                <img class="header-index__logo-img" src="images/index/logo-header.svg" width="145" height="36" alt="Логотип магазина Девайс.">
+              </a>
+              <nav class="header-index__navigation navigation">
+                <div class="navigation__user">
+                  <form class="navigation__form search-form" action="https://echo.htmlacademy.ru/" method="get">
+                    <label class="visually-hidden" for="search">Поле для поиска по сайту</label>
+                    <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+                    <button class="search-form__btn" type="submit">Найти</button>
+                  </form>
+                  <ul class="navigation__list-user">
+                    <li class="navigation__item-user navigation__item-user--entrance">
+                      <a class="navigation__link-user navigation__link-user--entrance" href="#">Войти</a>
+                    </li>
+                    <li class="navigation__item-user navigation__item-user--compare">
+                      <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
+                    </li>
+                    <li class="navigation__item-user navigation__popover popover">
+                      <span class="navigation__basket-quantity">2</span>
+                      <a class="navigation__link-user navigation__link-user--basket" href="#">Корзина</a>
+                      <!-- ПОПОВЕР -->
+                      <div class="popover__wrap ">
+                        <ul class="popover__list">
+                          <li class="popover__item">
+                            <a class="popover__link link-reset" href="#">
+                              <img class="popover__img" src="images/index/header-amateur-selfie-stick.jpg" width="39" height="43" alt="Любительская селфи-палка.">
+                              <span class="popover__text">Любительская селфи-палка</span>
+                            </a>
+                            <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
+                          </li>
+                          <li class="popover__item">
+                            <a class="popover__link link-reset" href="#">
+                              <img class="popover__img" src="images/index/header-professional-selfie-stick.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
+                              <span class="popover__text">Профессиональная селфи-палка</span>
+                            </a>
+                            <button class="popover__btn" type="button"> <span>Удалить из корзины</span> </button>
+                          </li>
+                        </ul>
+                        <div class="popover__total">
+                          <p class="popover__products"><span class="visually-hidden">В корзине</span>Товаров: 2</p>
+                          <p class="popover__amount">Сумма: 2000&nbsp;₽</p>
+                        </div>
+                        <a class="popover__btn link-reset" href="#">Открыть корзину</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="navigation__list">
+                  <li class="navigation__item navigation__item--btn">
+                    <button class="navigation__link btn btn-reset navigation__link--js">Каталог товаров</button>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link btn" href="#delivery">Доставка</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link btn" href="#">Гарантия</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link btn" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+                <!-- ВЫПАДАШКА -->
+                <ul class="navigation__list-catalog">
+                  <li class="navigation__item-catalog">
+                    <a class="navigation__link-catalog" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="navigation__item-catalog">
+                    <!-- ссылка временная, адрес у страницы с моноподами другой -->
+                    <a class="navigation__link-catalog navigation__link-catalog--outline link-reset" href="catalog.html">Моноподы для cелфи</a>
+                  </li>
+                  <li class="navigation__item-catalog">
+                    <a class="navigation__link-catalog" href="#">Экшн-камеры</a>
+                  </li>
+                  <li class="navigation__item-catalog">
+                    <a class="navigation__link-catalog" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="navigation__item-catalog">
+                    <a class="navigation__link-catalog" href="#">Умные часы</a>
+                  </li>
+                  <li class="navigation__item-catalog">
+                    <a class="navigation__link-catalog" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-            <ul class="navigation__list">
-              <li class="navigation__item navigation__item--btn">
-                <button class="navigation__link btn btn-reset navigation__link--js">Каталог товаров</button>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link btn" href="#delivery">Доставка</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link btn" href="#">Гарантия</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link btn" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-            <ul class="navigation__list-catalog">
-              <li class="navigation__item-catalog">
-                <a class="navigation__link-catalog" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="navigation__item-catalog">
-                <!-- ссылка временная, адрес у страницы с моноподами другой -->
-                <a class="navigation__link-catalog navigation__link-catalog--outline link-reset" href="catalog.html">Моноподы для cелфи</a>
-              </li>
-              <li class="navigation__item-catalog">
-                <a class="navigation__link-catalog" href="#">Экшн-камеры</a>
-              </li>
-              <li class="navigation__item-catalog">
-                <a class="navigation__link-catalog" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="navigation__item-catalog">
-                <a class="navigation__link-catalog" href="#">Умные часы</a>
-              </li>
-              <li class="navigation__item-catalog">
-                <a class="navigation__link-catalog" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        </header>
       </div>
-    </header>
+    </div>
 
-    <main class="main main-index">
+    <main class="main">
       <h1 class="visually-hidden">Интернет-магазин гаджетов Девайс</h1>
-      <section class="products section-gap">
-        <div class="container">
+      <section class="products container">
+        <!-- <div class="container"> -->
           <h2 class="visually-hidden">Топ товаров</h2>
           <div class="products__slider slider">
             <!-- Кнопки навигации слайдера -->
@@ -125,10 +128,14 @@
                 </p>
                 <a class="slider__btn-descr btn" href="#">Подробнее</a>
                 <dl class="slider__descr-list">
-                  <dt class="slider__term">Дальность полета</dt>
-                  <dd class="slider__definition">800&nbsp;м</dd>
-                  <dt class="slider__term">Радиус поражения</dt>
-                  <dd class="slider__definition">50&nbsp;м</dd>
+                  <div class="slider__wrap-dl">
+                    <dt class="slider__term">800&nbsp;м</dt>
+                    <dd class="slider__definition">Дальность полета</dd>
+                  </div>
+                  <div class="slider__wrap-dl">
+                    <dt class="slider__term">50&nbsp;м</dt>
+                    <dd class="slider__definition">Радиус поражения</dd>
+                  </div>
                 </dl>
               </div>
             </div>
@@ -144,8 +151,10 @@
                 </p>
                 <a class="slider__btn-descr btn" href="#">Подробнее</a>
                 <dl class="slider__descr-list">
-                  <dt class="slider__term">Без подзарядки</dt>
-                  <dd class="slider__definition">48&nbsp;часов</dd>
+                  <div class="slider__wrap-dl">
+                    <dt class="slider__term">48&nbsp;часов</dt>
+                    <dd class="slider__definition">Без подзарядки</dd>
+                  </div>
                 </dl>
               </div>
             </div>
@@ -162,12 +171,18 @@
                 </p>
                 <a class="slider__btn-descr btn" href="#">Подробнее</a>
                 <dl class="slider__descr-list">
-                  <dt class="slider__term">Длина палки</dt>
-                  <dd class="slider__definition">8,5&nbsp;м</dd>
-                  <dt class="slider__term">Вес палки</dt>
-                  <dd class="slider__definition">5&nbsp;кг</dd>
-                  <dt class="slider__term">Материал</dt>
-                  <dd class="slider__definition">Карбон</dd>
+                  <div class="slider__wrap-dl">
+                    <dt class="slider__term">8,5&nbsp;м</dt>
+                    <dd class="slider__definition">Длина палки</dd>
+                  </div>
+                  <div class="slider__wrap-dl">
+                    <dt class="slider__term">5&nbsp;кг</dt>
+                    <dd class="slider__definition">Вес палки</dd>
+                  </div>
+                  <div class="slider__wrap-dl">
+                    <dt class="slider__term">Карбон</dt>
+                    <dd class="slider__definition">Материал</dd>
+                  </div>
                 </dl>
               </div>
             </div>
@@ -184,11 +199,11 @@
               </button>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </section>
 
-      <section class="category  section-gap">
-        <div class="container">
+      <section class="category container">
+        <!-- <div class="container"> -->
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="category__list">
             <li class="category__item">
@@ -216,10 +231,10 @@
               <a class="category__link-title link-reset" href="#"><h3 class="category__title">Квадрокоптеры</h3></a>
             </li>
           </ul>
-        </div>
+        <!-- </div> -->
       </section>
 
-      <section class="delivery  section-gap" id="delivery">
+      <section class="delivery" id="delivery">
         <div class="container delivery__container">
           <div class="delivery__wrap-btn">
             <button class="delivery__btn btn btn-reset delivery__btn--current" type="button"
@@ -254,14 +269,14 @@
         </div>
       </section>
 
-      <div class="delivery-special container section-gap">
+      <div class="delivery-special container">
         <a class="delivery-special__link link-reset" href="#">
           Доставим редкий товар под заказ
         </a>
         <span class="delivery-special__icon-info"></span>
       </div>
 
-      <div class="container about-container section-gap">
+      <div class="container about-container">
         <section class="about">
           <h2 class="about__title title">О нас</h2>
           <p class="about__descr text">
@@ -290,7 +305,7 @@
           </address>
           <h3 class="contacts__subtitle">Время работы</h3>
           <p class="contacts__text text">пн—пт: с 10:00 до 22:00</p>
-          <p class="contacts__text text">сб—вс: с 10:00 до 19:00</p>
+          <p class="contacts__text contacts__text--bottom text">сб—вс: с 10:00 до 19:00</p>
           <a class="contacts__link btn" href="#">Напишите нам</a>
         </section>
       </div>
@@ -318,7 +333,7 @@
       <div class="container footer-container">
         <div class="footer__wrap-logo">
           <a class="footer__logo" href="#logo">
-            <img src="images/index/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
+            <img class="footer__image-logo" src="images/index/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
           </a>
           <address class="footer__address footer__address-descr">
             <p class="footer__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
