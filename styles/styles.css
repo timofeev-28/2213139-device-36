@@ -168,12 +168,29 @@ img {
 
 .search-form__search {
   display: block;
+  padding-left: 48px;
   width: 359px;
   height: 40px;
-  padding-left: 48px;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--black);
   border: 2px solid var(--black);
   border-radius: 50px 0 0 50px;
   background-color: transparent;
+}
+
+.search-form__search::placeholder {
+  color: var(--black);
+  opacity: 0.3;
+  transition: color .9s;
+}
+
+.search-form__search:focus-visible::placeholder {
+  color: transparent;
+}
+
+.search-form__search:focus-visible {
+  outline: none;
 }
 
 .search-form__btn {
@@ -272,6 +289,28 @@ img {
   padding-bottom: 6px;
 }
 
+.navigation__link--plus {
+  position: relative;
+  padding-right: 61px;
+}
+
+.navigation__link--plus::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  z-index: 3;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/index/header-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
 .navigation__item--btn {
   margin-right: auto;
 }
@@ -347,9 +386,9 @@ img {
   list-style-type: none;
 }
 
-.slider__item-count--first::after,
-.slider__item-count--second::after,
-.slider__item-count--third::after {
+.slider__item-count--first::before,
+.slider__item-count--second::before,
+.slider__item-count--third::before {
   position: absolute;
   top: 267px;
   right: 47px;
@@ -357,19 +396,18 @@ img {
   font-size: 193px;
   line-height: 30px;
   color: var(--white);
-  z-index: -1;
 }
 
-.slider__item-count--first::after {
+.slider__item-count--first::before {
   content: "0"counter(list-item);
 }
 
-.slider__item-count--second::after {
+.slider__item-count--second::before {
   content: "0"counter(list-item);
   display: none;
 }
 
-.slider__item-count--third::after {
+.slider__item-count--third::before {
   content: "0"counter(list-item);
   display: none;
 }
@@ -708,27 +746,57 @@ img {
 }
 
 .mailing__title {
-  width: 350px;
+  width: 50%;
   margin: 0;
-  margin-right: 230px;
+  padding-right: 170px;
 }
 
 .mailing__descr {
+  width: 50%;
   margin: 0;
   padding-top: 8px;
-}
-
-.mailing__text {
-  margin: 0;
 }
 
 .mailing__form {
   display: flex;
 }
 
+.mailing__input {
+  width: 557px;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
 .mailing__btn {
   margin-right: auto;
+  padding: 18px 12px;
   min-width: 253px;
+  border: 3px solid #C4C4C4;
+}
+
+.mailing__text {
+  position: relative;
+  align-self: center;
+  margin: 0;
+  margin-left: 20px;
+  padding-left: 31px;
+}
+
+.mailing__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/index/mailing-green-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* FOOTER */
@@ -869,7 +937,7 @@ img {
 }
 
 .main__title {
-  margin-bottom: 16px;
+  margin-bottom: 11px;
   padding-top: 36px;
   padding-left: var(--main-gap-left);
 }
@@ -883,7 +951,7 @@ img {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 34px;
+  margin-bottom: 29px;
 }
 
 .breadcrumbs__item:not(:last-child) {
@@ -891,6 +959,8 @@ img {
 }
 
 .breadcrumbs__link {
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-decoration: none;
   color: inherit;
 }
@@ -937,6 +1007,16 @@ img {
   letter-spacing: -0.02em;
 }
 
+.form__range-wrap {
+  text-align: center;
+}
+
+.form__range {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
 .form__range-label {
   font-size: 14px;
   line-height: 20px;
@@ -944,10 +1024,13 @@ img {
 
 .form__range-from,
 .form__range-before {
+  width: 45px;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  border: none;
+  background-color: transparent;
 }
 
 .form__label {
@@ -1072,7 +1155,7 @@ img {
 .products__link-nav {
   display: inline-block;
   padding-top: 9px;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   text-align: center;
   text-decoration: none;
