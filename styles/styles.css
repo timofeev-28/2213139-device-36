@@ -380,15 +380,15 @@ img {
   pointer-events: none;
 }
 
-.slider__list-count {
+.header-index__list-count {
   margin: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-.slider__item-count--first::before,
-.slider__item-count--second::before,
-.slider__item-count--third::before {
+.header-index__item-count--first::before,
+.header-index__item-count--second::before,
+.header-index__item-count--third::before {
   position: absolute;
   top: 267px;
   right: 47px;
@@ -398,16 +398,16 @@ img {
   color: var(--white);
 }
 
-.slider__item-count--first::before {
+.header-index__item-count--first::before {
   content: "0"counter(list-item);
 }
 
-.slider__item-count--second::before {
+.header-index__item-count--second::before {
   content: "0"counter(list-item);
   display: none;
 }
 
-.slider__item-count--third::before {
+.header-index__item-count--third::before {
   content: "0"counter(list-item);
   display: none;
 }
@@ -607,7 +607,7 @@ img {
 
 /* DELIVERY-SPECIAL */
 
-.delivery-special__link {
+.main__special-delyvery {
   position: relative;
   display: block;
   margin-top: 70px;
@@ -626,7 +626,7 @@ img {
   background-color: var(--color-background-gray);
 }
 
-.delivery-special__link::before {
+.main__special-delyvery::before {
   content: "";
   position: absolute;
   top: 0;
@@ -640,7 +640,7 @@ img {
   background-size: auto;
 }
 
-.delivery-special__link::after {
+.main__special-delyvery::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1062,22 +1062,16 @@ img {
   background-color: var(--color-background-gray);
 }
 
-.products__wrap {
-  padding-left: 40px;
-  padding-bottom: 78px;
-  padding-right: 40px;
-  background-color: var(--white);
-}
+/* КАРТОЧКИ ТОВАРОВ */
 
 .products__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 44px 40px;
   margin: 0;
-  padding-top: 70px;
-  padding-bottom: 44px;
-  padding-left: 0;
+  padding: 70px 40px 78px;
   list-style: none;
+  background-color: var(--white);
 }
 
 .products__link {
@@ -1099,7 +1093,6 @@ img {
   display: flex;
   justify-content: space-between;
   padding-top: 32px;
-  padding-bottom: 4px;
 }
 
 .products__title {
@@ -1121,11 +1114,15 @@ img {
   line-height: 21px;
 }
 
+.products__item--download,
+.products__item--pagination {
+  grid-column: 1 / -1;
+}
+
 .products__link-download {
   display: block;
-  margin-bottom: 44px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: var(--second-font);
   font-weight: 800;
   font-size: 16px;
@@ -1141,7 +1138,7 @@ img {
 .products__wrap-pagination {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 15px 21px;
   background-color: var(--color-background-gray);
 }
 
@@ -1172,4 +1169,8 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+}
+
+.products__link-btn--disabled {
+  opacity: 0.3;
 }
