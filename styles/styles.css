@@ -116,6 +116,25 @@ img {
   color: inherit;
 }
 
+.btn-line{
+  position: relative;
+}
+
+.btn-line span{
+  position: relative;
+  z-index: 1;
+}
+
+.btn-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 100%;
+  height: 8px;
+  background-color: var(--yellow);
+}
+
 .text {
   font-size: 18px;
   line-height: 30px;
@@ -442,38 +461,48 @@ img {
 
 .slider__text {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .slider__btn-descr {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 220px;
 }
 
 .slider__descr-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  /* grid-template-rows: auto auto; */
+  gap: 12px 20px;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
+.slider__wrap-dl {
+  display: grid;
+}
+
 .slider__term {
-  margin-bottom: 12px;
-  font-size: 36px;
+  grid-row: 2 / 3;
+  font-size: 16px;
   line-height: 30px;
 }
 
 .slider__definition {
+  grid-row: 1 / 2;
   margin-left: 0;
-  font-size: 16px;
+  font-size: 36px;
   line-height: 30px;
 }
 
 /* PRODUCTS */
 
 .category {
+  padding-top: 70px;
   padding-bottom: 70px;
 }
 
@@ -565,6 +594,11 @@ img {
   width: 280px;
   padding-top: 65px;
   padding-bottom: 65px;
+}
+
+.delivery__btn {
+  padding: 10px;
+  width: 160px;
 }
 
 .delivery__tabs {
@@ -688,6 +722,12 @@ img {
   letter-spacing: -0.02em;
 }
 
+.about__link {
+  display: inline-block;
+  padding: 10px;
+  min-width: 270px;
+}
+
 .contacts {
   width: 50%;
 }
@@ -726,6 +766,12 @@ img {
 
 .contacts__text--bottom {
   margin-bottom: 30px;
+}
+
+.contacts__link {
+  display: inline-block;
+  padding: 10px;
+  min-width: 259px;
 }
 
 /* MAILING */
@@ -815,6 +861,7 @@ img {
 .footer__wrap-logo {
   display: flex;
   flex-direction: column;
+  margin-right: 25px;
   width: 239px;
 }
 
@@ -831,6 +878,7 @@ img {
 
 .footer__list {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 0;
@@ -892,6 +940,7 @@ img {
 
 .footer__address-text {
   margin: 0;
+  max-width: 240px;
   font-size: 16px;
   line-height: 20px;
   font-style: normal;
