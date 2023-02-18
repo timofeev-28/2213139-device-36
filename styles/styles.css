@@ -143,14 +143,16 @@ img {
 
 /* HEADER */
 
-.header {
+/* .header {
   padding-top: 40px;
-}
+} */
 
 .header__container {
   padding-right: 60px;
+  padding-bottom: 40px;
   padding-left: 60px;
   background-color: var(--color-background);
+  transform: translateY(40px);
 }
 
 .header__logo {
@@ -385,6 +387,10 @@ img {
 }
 
 /* HERO */
+
+/* .products {
+  padding-top: 40px;
+} */
 
 .slider {
   background: linear-gradient(to top, rgb(0 0 0 / 0) 75%, var(--color-background) 75%);
