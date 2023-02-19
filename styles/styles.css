@@ -25,8 +25,8 @@
 :root {
   --main-font: Rubik, sans-serif;
   --second-font: Raleway, sans-serif;
-  --black: #000;
-  --white: #fff;
+  --color-black: #000;
+  --color-white: #fff;
   --dark-gray: #444;
   --gray: #dcdcdc;
   --light: #f0f0f0;
@@ -36,6 +36,7 @@
   --color-text: var(--dark-gray);
   --color-background-gray: var(--light);
   --color-social: #7c7c7c;
+  --color-transparent: rgba(0, 0, 0, 0);
   --main-gap-left: 60px;
 }
 
@@ -60,7 +61,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: var(--black);
-  background-color: var(--white);
+  background-color: var(--color-white);
 }
 
 img {
@@ -147,7 +148,7 @@ img {
 .header {
   padding-right: 60px;
   padding-left: 60px;
-  background: linear-gradient(to bottom, rgb(0 0 0 / 0) 20px, var(--color-background) 20px)
+  background: linear-gradient(to bottom, var(--color-transparent) 20px, var(--color-background) 20px)
 }
 
 .header__logo {
@@ -184,13 +185,13 @@ img {
   font-size: 16px;
   line-height: 20px;
   color: var(--black);
-  border: 2px solid var(--black);
+  border: 2px solid var(--color-black);
   border-radius: 50px 0 0 50px;
   background-color: transparent;
 }
 
 .search-form__search::placeholder {
-  color: var(--black);
+  color: var(--color-black);
   opacity: 0.3;
   transition: color .9s;
 }
@@ -211,7 +212,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   background-color: transparent;
-  border: 2px solid var(--black);
+  border: 2px solid var(--color-black);
   border-left: none;
   border-radius: 0 50px 50px 0;
   cursor: pointer;
@@ -268,13 +269,12 @@ img {
   font-size: 14px;
   text-align: center;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--color-white);
 }
 
 .navigation__link-user--basket {
   padding-left: 22px;
 }
-
 
 .navigation__user-search {
   font-family: var(--main-font);
@@ -315,7 +315,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
-  border: 2px solid var(--black);
+  border: 2px solid var(--color-black);
   border-radius: 50%;
   opacity: 0.3;
 }
@@ -383,7 +383,7 @@ img {
 /* HERO */
 
 .slider {
-  background: linear-gradient(to bottom, var(--color-background) 150px, rgb(0 0 0 / 0) 150px);
+  background: linear-gradient(to bottom, var(--color-background) 150px, var(--color-transparent) 150px);
 }
 
 .slider__list-count {
@@ -396,9 +396,8 @@ img {
   position: relative;
 }
 
-.slider__slide--quadrocopter::before,
-.slider__slide--watch::before,
-.slider__slide--selfie-stick::before {
+.slider__item-count::before {
+  content: var(--count);
   position: absolute;
   top: 81px;
   right: 61px;
@@ -407,20 +406,21 @@ img {
   font-weight: 700;
   font-size: 180px;
   line-height: 30px;
-  color: var(--white);
+  color: var(--color-white);
 }
 
-.slider__slide--quadrocopter::before {
-  content: "0"counter(list-item);
+.slider__item-quadrocopter {
+  --count: "0"counter(list-item);
 }
 
-.slider__slide--watch::before {
-  content: "0"counter(list-item);
+.slider__item-watch::before {
+  --count: "0"counter(list-item);
 }
 
-.slider__slide--selfie-stick::before {
-  content: "0"counter(list-item);
+.slider__item-selfie-stick::before {
+  --count: "0"counter(list-item);
 }
+
 
 .slider__slide {
   display: none;
@@ -534,41 +534,42 @@ img {
   width: 160px;
   height: 160px;
   background-color: var(--color-background);
+  background-image: var(--bgi);
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center;
+  background-position: center var(--bgi-pos, center);
 }
 
-.category__link--glasses::before {
-  background-image: url("../images/index/product-glasses.svg");
+.category__link--glasses {
+  --bgi: url("../images/index/product-glasses.svg");
 }
 
-.category__link--monopod::before {
-  background-image: url("../images/index/product-monopod.svg");
-  background-position: bottom;
+.category__link--monopod {
+  --bgi: url("../images/index/product-monopod.svg");
+  --bgi-pos: bottom;
 }
 
-.category__link--camera::before {
-  background-image: url("../images/index/product-camera.svg");
+.category__link--camera {
+  --bgi: url("../images/index/product-camera.svg");
 }
 
-.category__link--bracelet::before {
-  background-image: url("../images/index/product-bracelet.svg");
+.category__link--bracelet {
+  --bgi: url("../images/index/product-bracelet.svg");
 }
 
-.category__link--watch::before {
-  background-image: url("../images/index/product-watch.svg");
+.category__link--watch {
+  --bgi: url("../images/index/product-watch.svg");
 }
 
-.category__link--copter::before {
-  background-image: url("../images/index/product-copter.svg");
+.category__link--copter {
+  --bgi: url("../images/index/product-copter.svg");
 }
 
 /* DELIVERY */
 
 .delivery {
   padding-bottom: 67px;
-  background: linear-gradient(to bottom, rgb(0 0 0 / 0) 26%, var(--color-background-gray) 26%);
+  background: linear-gradient(to bottom, var(--color-transparent) 26%, var(--color-background-gray) 26%);
 }
 
 .delivery__container {
@@ -869,7 +870,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   font-style: normal;
-  color: var(--white);
+  color: var(--color-white);
 }
 
 .footer__line {
@@ -894,7 +895,7 @@ img {
   padding-left: 0;
   max-width: 560px;
   list-style-type: none;
-  color: var(--white);
+  color: var(--color-white);
 }
 
 .social-list {
@@ -927,27 +928,27 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--color-social);
+  background-image: var(--bgi-footer);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
 }
 
-.social-list__link--telegram::before {
-  background-image: url("../images/index/social-telegram.svg");
+.social-list__link--telegram {
+  --bgi-footer: url("../images/index/social-telegram.svg");
 }
 
-.social-list__link--youtube::before {
-  background-image: url("../images/index/social-youtube.svg");
+.social-list__link--youtube {
+  --bgi-footer: url("../images/index/social-youtube.svg");
 }
 
-.social-list__link--twitter::before {
-  background-image: url("../images/index/social-twitter.svg");
+.social-list__link--twitter {
+  --bgi-footer: url("../images/index/social-twitter.svg");
 }
 
 .footer__address-tel {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
-
 }
 
 .footer__address-link {
@@ -959,7 +960,7 @@ img {
   line-height: 20px;
   text-decoration-line: underline;
   text-align: end;
-  color: var(--white);
+  color: var(--color-white);
 }
 
 .footer__logo-academy {
@@ -1123,7 +1124,7 @@ img {
   margin: 0;
   padding: 70px 40px 78px;
   list-style: none;
-  background-color: var(--white);
+  background-color: var(--color-white);
 }
 
 .products__link {
