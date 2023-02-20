@@ -843,7 +843,6 @@ img {
 }
 
 .footer-container {
-  position: relative;
   display: grid;
   grid-template-columns:  1fr max-content 1fr;
   column-gap: 35px;
@@ -854,10 +853,10 @@ img {
 
 .footer-container::before {
   content: "";
-  position: absolute;
-  left: 0;
-  bottom: 83px;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
   display: block;
+  align-self: center;
   width: 80px;
   height: 7px;
   background-color: var(--color-footer-line);
@@ -913,7 +912,7 @@ img {
 
 .social-list__link {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 40px;
   height: 40px;
 }
