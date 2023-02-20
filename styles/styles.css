@@ -843,26 +843,35 @@ img {
 }
 
 .footer-container {
+  position: relative;
   display: grid;
   grid-template-columns:  1fr max-content 1fr;
-  grid-template-rows: auto auto auto;
   column-gap: 35px;
   row-gap: 20px;
   padding-top: 62px;
   padding-bottom: 62px;
 }
 
-.footer__logo {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+.footer-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 83px;
   display: block;
-  width: max-content;
+  width: 80px;
+  height: 7px;
+  background-color: var(--color-footer-line);
+}
+
+.footer__logo {
+  grid-column: 1 / -1;
+  display: block;
+  justify-self: start;
   margin-bottom: 11px;
 }
 
 .footer__address-descr {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
 }
 
 .footer__address-text {
@@ -876,19 +885,8 @@ img {
   color: var(--color-white);
 }
 
-.footer__address-text::after {
-  content: "";
-  position: relative;
-  bottom: -63px;
-  display: block;
-  width: 80px;
-  height: 7px;
-  background-color: var(--color-footer-line);
-}
-
 .footer__list {
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -904,7 +902,6 @@ img {
 
 .social-list {
   grid-column: 2 / 3;
-  grid-row: 3 / 4;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -952,7 +949,7 @@ img {
 
 .footer__address-tel {
   grid-column: 3 / 4;
-  grid-row: 2 / 3;
+  justify-self: end;
 }
 
 .footer__address-link {
@@ -960,22 +957,18 @@ img {
   padding-top: 8px;
   padding-bottom: 8px;
   margin-left: auto;
-  width: max-content;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
   text-decoration-line: underline;
-  text-align: end;
   color: var(--color-white);
 }
 
 .footer__logo-academy {
   grid-column: 3 / 4;
-  grid-row: 3 / 4;
   justify-self: end;
   display: block;
   padding-top: 4px;
-  width: fit-content;
 }
 
 /* CATALOG-PAGE */
