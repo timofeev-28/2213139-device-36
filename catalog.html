@@ -25,13 +25,13 @@
                 <li class="navigation__item-user navigation__item-user--entrance">
                   <a class="navigation__link-user navigation__link-user--entrance" href="#">Коля Петухов</a>
                 </li>
-                <li class="navigation__item-user">
-                  <a class="navigation__link-user navigation__link-user--disabled">Войти</a>
+                <li class="navigation__item-user navigation__item-user--disabled">
+                  <a class="navigation__link-user navigation__link-user--disabled">Выйти</a>
                 </li>
                 <li class="navigation__item-user navigation__item-user--compare">
                   <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
                 </li>
-                <li class="navigation__item-user navigation__popover popover">
+                <li class="navigation__item-user navigation__item-user--basket navigation__popover popover">
                   <span class="navigation__basket-quantity">2</span>
                   <a class="navigation__link-user navigation__link-user--basket" href="#">Корзина</a>
                   <!-- ПОПОВЕР -->
@@ -120,7 +120,7 @@
         <div class="container catalog__container">
           <form class="catalog__filter-group form" action="https://echo.htmlacademy.ru/" method="get">
             <p class="form__title">Фильтр:</p>
-            <fieldset>
+            <fieldset class="form__fieldset">
               <legend class="form__subtitle">Стоимость</legend>
               <div class="form__range-wrap">
                 <input class="form__range" type="range">
@@ -135,7 +135,7 @@
                   aria-label="Введите число не больше 5000">
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="form__fieldset">
               <legend class="form__subtitle">Цвет</legend>
               <ul class="form__list">
                 <li class="form__item">
@@ -160,7 +160,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="form__fieldset">
               <legend class="form__subtitle">Bluetooth</legend>
               <ul class="form__list">
                 <li class="form__item">
@@ -184,12 +184,14 @@
                 <option value="Офигенные" disabled>Офигенные</option>
                 <option value="Дорогущие" disabled>Дорогущие</option>
               </select>
-              <a class="products__sorting-link" href="#">
-                <span class="visually-hidden">Вверх</span>
-              </a>
-              <a class="products__sorting-link" href="#">
-                <span class="visually-hidden">Вниз</span>
-              </a>
+              <ul class="products__sorting-list">
+                <li class="products__sorting-item">
+                  <a class="products__sorting-link products__sorting-link--up" href="#"><span class="visually-hidden">Вверх</span></a>
+                </li>
+                <li class="products__sorting-item">
+                  <a class="products__sorting-link products__sorting-link--down" href="#"><span class="visually-hidden">Вниз</span></a>
+                </li>
+              </ul>
             </div>
             <ul class="products__list">
               <li class="products__item">
