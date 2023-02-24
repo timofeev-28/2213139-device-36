@@ -120,23 +120,22 @@
         <div class="container catalog__container">
           <form class="catalog__filter-group form" action="https://echo.htmlacademy.ru/" method="get">
             <p class="form__title">Фильтр:</p>
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset form__fieldset--range">
               <legend class="form__subtitle">Стоимость</legend>
-              <div class="form__range-wrap">
-                <input class="form__range" type="range">
-                <button class="form__range-btn btn-reset" type="button"><span
+                <div class="form__range">
+                <button class="form__range-btn form__range-btn--min btn-reset" type="button"><span
                     class="visually-hidden">Минимум</span></button>
-                <button class="form__range-btn btn-reset" type="button"><span
+                <button class="form__range-btn form__range-btn--max btn-reset" type="button"><span
                     class="visually-hidden">Максимум</span></button>
-                <label class="form__range-label" for="from">от</label>
-                <input class="form__range-from" type="text" id="from" value="0" aria-label="Введите число от 0">
-                <label class="form__range-label" for="before">до</label>
-                <input class="form__range-before" type="text" id="before" value="5000"
-                  aria-label="Введите число не больше 5000">
               </div>
+              <label class="form__range-label form__range-label--from" for="from">от</label>
+              <input class="form__range-from" type="text" id="from" value="0" aria-label="Введите число от 0">
+              <label class="form__range-label form__range-label--before" for="before">до</label>
+              <input class="form__range-before" type="text" id="before" value="5000"
+                aria-label="Введите число не больше 5000">
             </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__subtitle">Цвет</legend>
+            <fieldset class="form__fieldset form__fieldset--checkbox">
+              <legend class="form__subtitle form__subtitle--checkbox">Цвет</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="form__check" type="checkbox" id="black" name="color-black" checked>
@@ -160,8 +159,8 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__subtitle">Bluetooth</legend>
+            <fieldset class="form__fieldset form__fieldset--radio">
+              <legend class="form__subtitle form__subtitle--radio">Bluetooth</legend>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="form__radio" type="radio" id="yes" name="Bluetooth" value="yes" checked>
@@ -173,7 +172,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="form__btn btn btn-reset" type="submit">Показать</button>
+            <button class="form__btn btn btn-line btn-reset" type="submit">Показать</button>
           </form>
           <div class="catalog__products products">
             <div class="products__sorting">
