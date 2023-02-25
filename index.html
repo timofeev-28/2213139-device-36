@@ -17,8 +17,9 @@
       <nav class="header__navigation navigation">
         <div class="navigation__user">
           <form class="navigation__form search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="search">Поле для поиска по сайту</label>
-            <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <label class="search-form__label" for="search">
+              <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту" aria-label="Поле для поиска по сайту">
+            </label>
             <button class="search-form__btn" type="submit">Найти</button>
           </form>
           <ul class="navigation__list-user">
@@ -29,8 +30,8 @@
               <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
             </li>
             <li class="navigation__item-user navigation__item-user--basket navigation__popover popover">
-              <span class="navigation__basket-quantity">2</span>
-              <a class="navigation__link-user navigation__link-user--basket" href="#">Корзина</a>
+              <a class="navigation__link-user navigation__link-user--basket" href="#">
+                <span class="navigation__basket-quantity">2</span>Корзина</a>
               <!-- ПОПОВЕР -->
               <div class="popover__wrap ">
                 <ul class="popover__list">
@@ -62,17 +63,17 @@
         </div>
         <ul class="navigation__list">
           <li class="navigation__item navigation__item--btn">
-            <button class="navigation__link navigation__link--plus btn btn-reset navigation__link--js">Каталог
+            <button class="navigation__link navigation__link--plus btn btn-reset">Каталог
               товаров</button>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link btn" href="#delivery">Доставка</a>
+            <a class="navigation__link navigation__link--effects btn" href="#delivery">Доставка</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link btn" href="#">Гарантия</a>
+            <a class="navigation__link navigation__link--effects btn" href="#">Гарантия</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link btn" href="#contacts">Контакты</a>
+            <a class="navigation__link navigation__link--effects btn" href="#contacts">Контакты</a>
           </li>
         </ul>
         <!-- ВЫПАДАШКА -->
@@ -228,7 +229,7 @@
               <h3 class="category__title">Виртуальная реальность</h3>
             </a>
           </li>
-          <li class="category__item category__item--outline">
+          <li class="category__item">
             <a class="category__link category__link--monopod" href="catalog.html">
               <h3 class="category__title">Моноподы для селфи</h3>
             </a>
@@ -258,14 +259,20 @@
 
       <section class="delivery" id="delivery">
         <div class="container delivery__container">
-          <div class="delivery__wrap-btn">
-            <button class="delivery__btn btn btn-line btn-reset delivery__btn--current" type="button"
+          <ul class="delivery__list">
+            <li class="delivery__item delivery__item--current" tabindex="0">
+              <button class="delivery__btn btn btn-reset delivery__btn--current" tabindex="-1" type="button"
               data-path="delivery">Доставка</button>
-            <button class="delivery__btn btn btn-line btn-reset" type="button"
+            </li>
+            <li class="delivery__item">
+              <button class="delivery__btn btn btn-line btn-reset" type="button"
               data-path="warranty">Гарантия</button>
-            <button class="delivery__btn btn btn-line btn-reset" type="button"
+            </li>
+            <li class="delivery__item">
+              <button class="delivery__btn btn btn-line btn-reset" type="button"
               data-path="credit">Кредит</button>
-          </div>
+            </li>
+          </ul>
           <!-- ТАБЫ -->
           <div class="delivery__tabs tabs">
             <div class="tabs__item tabs__item--delivery tabs__item--active" data-target="delivery">
