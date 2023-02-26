@@ -1494,15 +1494,36 @@ img {
 }
 
 .footer__logo-academy {
+  position: relative;
   grid-column: 3 / 4;
   justify-self: end;
   display: block;
   padding-top: 4px;
+}
+
+.footer__logo-academy-mask {
+  display: inline-block;
   width: 115px;
   height: 33px;
   background-color: var(--color-footer-line);
   -webkit-mask: url("../images/index/logo-academy.svg") no-repeat center / contain;
   mask: url("../images/index/logo-academy.svg") no-repeat center / contain;
+  transition: background-color 0.3s ease;
+}
+
+.footer__logo-academy:hover .footer__logo-academy-mask{
+  background-color: var(--color-white);
+  transition: background-color 0.4s ease;
+}
+
+.footer__logo-academy:focus-visible {
+  outline: 2px solid var(--color-focus);
+  transition: outline 0.3s ease;
+}
+
+.footer__logo-academy:active .footer__logo-academy-mask{
+  background-color: var(--color-social);
+  transition: background-color 0.3s ease;
 }
 
 /* CATALOG-PAGE */
