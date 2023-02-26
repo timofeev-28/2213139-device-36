@@ -63,21 +63,21 @@
         </div>
         <ul class="navigation__list">
           <li class="navigation__item navigation__item--btn">
-            <button class="navigation__link navigation__link--plus btn btn-reset">Каталог
+            <button class="navigation__link--plus btn btn-reset">Каталог
               товаров</button>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--effects btn" href="#delivery">Доставка</a>
+            <a class="navigation__link btn" href="#delivery">Доставка</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--effects btn" href="#">Гарантия</a>
+            <a class="navigation__link btn" href="#">Гарантия</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--effects btn" href="#contacts">Контакты</a>
+            <a class="navigation__link btn" href="#contacts">Контакты</a>
           </li>
         </ul>
         <!-- ВЫПАДАШКА -->
-        <ul class="navigation__list-catalog">
+        <div class="navigation__wrap-catalog">
           <ul class="navigation__list-col">
             <li class="navigation__item-catalog">
               <a class="navigation__link-catalog" href="#">Виртуальная реальность</a>
@@ -104,7 +104,7 @@
               <a class="navigation__link-catalog" href="#">Квадрокоптеры</a>
             </li>
           </ul>
-        </ul>
+        </div>
       </nav>
     </header>
 
@@ -120,7 +120,7 @@
             <li class="slider__item-count"></li>
           </ol>
           <div class="slider__wrap-image">
-            <img class="slider__image" src="images/index/slide-quadrocopter — копия.png" width="560" height="560"
+            <img class="slider__image" src="images/index/slide-quadrocopter.png" width="560" height="540"
               alt="Крутейший квадрокоптер с лазером.">
           </div>
           <div class="slider__wrap-descr">
@@ -209,15 +209,21 @@
           <span class="visually-hidden">Следующее фото</span>
         </button>
         <ul class="slider__pagination">
-          <button class="slider__pagination-btn btn-reset slider__pagination-btn--current" type="button">
-            <span class="visually-hidden">1 фото</span>
-          </button>
-          <button class="slider__pagination-btn btn-reset" type="button">
-            <span class="visually-hidden">2 фото</span>
-          </button>
-          <button class="slider__pagination-btn btn-reset" type="button">
-            <span class="visually-hidden">3 фото</span>
-          </button>
+          <li>
+            <button class="slider__pagination-btn btn-reset slider__pagination-btn--current" type="button">
+              <span class="visually-hidden">1 фото</span>
+            </button>
+          </li>
+          <li>
+            <button class="slider__pagination-btn btn-reset" type="button">
+              <span class="visually-hidden">2 фото</span>
+            </button>
+          </li>
+          <li>
+            <button class="slider__pagination-btn btn-reset" type="button">
+              <span class="visually-hidden">3 фото</span>
+            </button>
+          </li>
         </ul>
       </section>
 
