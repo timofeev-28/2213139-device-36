@@ -17,8 +17,9 @@
           <nav class="header__navigation navigation">
             <div class="navigation__user">
               <form class="navigation__form search-form" action="https://echo.htmlacademy.ru/" method="get">
-                <label class="visually-hidden" for="search">Поле для поиска по сайту</label>
-                <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+                <label class="search-form__label" for="search">
+                  <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту" aria-label="Поле для поиска по сайту">
+                </label>
                 <button class="search-form__btn" type="submit">Найти</button>
               </form>
               <ul class="navigation__list-user">
@@ -26,7 +27,7 @@
                   <a class="navigation__link-user navigation__link-user--entrance" href="#">Коля Петухов</a>
                 </li>
                 <li class="navigation__item-user navigation__item-user--disabled">
-                  <a class="navigation__link-user navigation__link-user--disabled">Выйти</a>
+                  <a class="navigation__link-user navigation__link-user--disabled" href="#">Выйти</a>
                 </li>
                 <li class="navigation__item-user navigation__item-user--compare">
                   <a class="navigation__link-user navigation__link-user--compare" href="#">Сравнить</a>
@@ -106,10 +107,10 @@
       <h1 class="main__title title container">Моноподы для селфи</h1>
       <ul class="main__list breadcrumbs container">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">Главная</a>
+          <a class="breadcrumbs__link breadcrumbs__link--effects" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">Каталог товаров</a>
+          <a class="breadcrumbs__link breadcrumbs__link--effects" href="#">Каталог товаров</a>
         </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link">Моноподы для селфи</a>
