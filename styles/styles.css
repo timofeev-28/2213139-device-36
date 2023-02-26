@@ -1329,7 +1329,7 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 9px;
   margin-top: 0;
   margin-bottom: 12px;
   padding-top: 3px;
@@ -1337,6 +1337,51 @@ img {
   max-width: 560px;
   list-style-type: none;
   color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.footer__link {
+  position: relative;
+  padding-left: 13px;
+}
+
+.footer__link:hover {
+  color: var(--color-footer-line);
+  transition: color 0.3s ease;
+}
+
+.footer__link::after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  bottom: 4px;
+  left: 11px;
+  height: 2px;
+  background-color: var(--color-footer-line);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.footer__link:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.2s ease;
+}
+
+.footer__link:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -6px;
+  transition: outline 0.2s ease;
+}
+
+.footer__link:active {
+  color: var(--color-footer-line);
+  opacity: 0.3;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer__link:active::after {
+  transform: scaleX(1);
+  transition: transform 0.2s ease;
 }
 
 .social-list {
@@ -1419,8 +1464,10 @@ img {
 
 .footer__address-link {
   display: block;
-  padding-top: 7px;
-  padding-bottom: 8px;
+  padding-top: 3px;
+  padding-right: 2px;
+  padding-bottom: 3px;
+  padding-left: 2px;
   margin-left: auto;
   font-style: normal;
   font-size: 16px;
@@ -1429,11 +1476,33 @@ img {
   color: var(--color-white);
 }
 
+.footer__address-link:hover {
+  color: var(--color-footer-line);
+  transition: color 0.3s ease;
+}
+
+.footer__address-link:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+  transition: outline 0.3s ease;
+}
+
+.footer__address-link:active {
+  color: var(--color-footer-line);
+  opacity: 0.3;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
 .footer__logo-academy {
   grid-column: 3 / 4;
   justify-self: end;
   display: block;
   padding-top: 4px;
+  width: 115px;
+  height: 33px;
+  background-color: var(--color-footer-line);
+  -webkit-mask: url("../images/index/logo-html-academy.svg") no-repeat center / contain;
+  mask: url("../images/index/logo-html-academy.svg") no-repeat center / contain;
 }
 
 /* CATALOG-PAGE */
