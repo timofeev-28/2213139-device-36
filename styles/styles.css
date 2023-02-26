@@ -1501,8 +1501,8 @@ img {
   width: 115px;
   height: 33px;
   background-color: var(--color-footer-line);
-  -webkit-mask: url("../images/index/logo-html-academy.svg") no-repeat center / contain;
-  mask: url("../images/index/logo-html-academy.svg") no-repeat center / contain;
+  -webkit-mask: url("../images/index/logo-academy.svg") no-repeat center / contain;
+  mask: url("../images/index/logo-academy.svg") no-repeat center / contain;
 }
 
 /* CATALOG-PAGE */
