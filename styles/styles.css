@@ -1693,7 +1693,8 @@ img {
 }
 
 .catalog__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 260px 1fr;
   padding-left: var(--main-gap-left);
 }
 
@@ -1947,19 +1948,18 @@ img {
   transform: translateX(12px);
 }
 
-.catalog__products {
-  flex-grow: 1;
-}
-
 /* СОРТИРОВКА */
 
 .products__sorting {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   padding-right: 40px;
   padding-left: 40px;
   padding-bottom: 25px;
+  height: 45px;
   background-color: var(--color-background-gray);
 }
 
@@ -2058,7 +2058,9 @@ img {
 /* КАРТОЧКИ ТОВАРОВ */
 
 .products__wrap {
-  padding: 70px 40px 78px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding: 116px 40px 78px;
   background-color: var(--color-white);
 }
 
@@ -2067,7 +2069,7 @@ img {
   grid-template-columns: repeat(2, 360px);
   gap: 44px 40px;
   margin-top: 0;
-  margin-bottom: 44px;
+  margin-bottom: 45px;
   padding-left: 0;
   list-style: none;
 }
@@ -2112,7 +2114,7 @@ img {
 .products__title {
   grid-column: 1 / 2;
   margin: 0;
-  padding-top: 31px;
+  padding-top: 32px;
   max-width: 226px;
   font-weight: 700;
   font-size: 18px;
@@ -2308,5 +2310,4 @@ img {
 .products__link-btn--disabled {
   cursor: default;
   color: #b9b9b9;
-  ;
 }
