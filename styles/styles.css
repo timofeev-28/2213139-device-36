@@ -46,6 +46,7 @@
   --color-btn-active: #ffcc33;
   --color-form-label: #b3b3b3;
   --color-btn-pgn: #9a9a9a;
+  --color-shadow: rgba(240, 240, 240, 0.8);
   --main-gap-left: 60px;
 }
 
@@ -1010,12 +1011,10 @@ img {
 /* DELIVERY-SPECIAL */
 
 .main__special-delyvery {
-  position: relative;
-  display: block;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
   margin-top: 70px;
   margin-bottom: 68px;
-  padding-top: 41px;
-  padding-bottom: 38px;
   font-family: var(--second-font);
   font-weight: 800;
   font-size: 20px;
@@ -1028,13 +1027,18 @@ img {
   background-color: var(--color-background-gray);
 }
 
+.main__special-text {
+  justify-self: center;
+  padding-top: 41px;
+  padding-right: 38px;
+  padding-bottom: 38px;
+}
+
 .main__special-delyvery::before {
   content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  display: block;
   width: 125px;
+  height: 100%;
   background-color: var(--color-background);
   background-image: url("../images/index/delivery-auto.svg");
   background-repeat: no-repeat;
@@ -1043,24 +1047,10 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.main__special-delyvery::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 42px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--gray);
-}
-
 .main__special-delyvery-info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 61px;
-  z-index: 1;
+  align-self: center;
+  margin-right: 42px;
+  transition: opacity 0.3s;
 }
 
 .main__special-delyvery:hover svg g{
@@ -1596,8 +1586,6 @@ img {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   transition: background-color 0.3s ease;
-  /* -webkit-mask: url("../images/index/logo-academy.svg") no-repeat center / contain;
-  mask: url("../images/index/logo-academy.svg") no-repeat center / contain; */
 }
 
 .footer__logo-academy:hover::before {
@@ -2069,37 +2057,84 @@ img {
 
 /* КАРТОЧКИ ТОВАРОВ */
 
+.products__wrap {
+  padding: 70px 40px 78px;
+  background-color: var(--color-white);
+}
+
 .products__list {
   display: grid;
   grid-template-columns: repeat(2, 360px);
   gap: 44px 40px;
-  margin: 0;
-  padding: 70px 40px 78px;
+  margin-top: 0;
+  margin-bottom: 44px;
+  padding-left: 0;
   list-style: none;
-  background-color: var(--color-white);
-}
-
-.products__item {
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 .products__link {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-decoration: none;
   color: inherit;
 }
 
-.products__link-img::after {
-  content: "Подробнее";
+.products__img-wrap {
+  position: relative;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 360px;
+  height: 380px;
+  overflow: hidden;
+}
+
+/* знак new */
+.products__img-wrap--new::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 27px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../images/catalog/catalog-new.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.products__image {
+  display: block;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.products__title {
+  grid-column: 1 / 2;
+  margin: 0;
+  padding-top: 31px;
+  max-width: 226px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.products__price {
+  grid-column: 2 / 3;
+  justify-self: end;
+  padding-top: 32px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.products__detail {
+  position: relative;
   z-index: 1;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  justify-self: center;
+  align-self: center;
   padding: 0 12px;
   min-width: 220px;
   font-family: var(--second-font);
@@ -2109,69 +2144,46 @@ img {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  visibility: hidden;
   opacity: 0;
-  background-image: linear-gradient(var(--color-transparent) 7px, var(--color-background) 7px, var(--color-background) 15px, var(--color-transparent) 15px);
-  transition: background-image 0.3s, opacity 0.3s;
+  box-shadow: 0 0 0 300px var(--color-shadow);
+  background-image: linear-gradient(var(--color-shadow) 7px, var(--color-background) 7px, var(--color-background) 15px, var(--color-shadow) 15px);
+  transition: opacity 0.3s, visibility 0.3s, background-image 0.3s;
 }
 
-
-.products__link-title:active ~ .products__link-img::after {
-  background-image: linear-gradient(var(--color-transparent) 7px, var(--color-footer-line) 7px, var(--color-footer-line) 15px, var(--color-transparent) 15px);
+.products__link:hover .products__detail{
+  visibility: visible;
   opacity: 1;
-  transition: background-image 0.3s, opacity 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
-.products__link-img:active::after {
-  background-image: linear-gradient(var(--color-transparent) 7px, var(--color-footer-line) 7px, var(--color-footer-line) 15px, var(--color-transparent) 15px);
+.products__link:hover .products__title,
+.products__link:hover .products__price {
+  opacity: 0.6;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.products__link:focus-visible {
+  outline: 2px solid var(--color-focus);
+  transition: outline 0.3s;
+}
+
+.products__link:active .products__detail{
+  visibility: visible;
   opacity: 1;
-  transition: background-image 0.3s, opacity 0.3s;
+  background-image: linear-gradient(var(--color-shadow) 7px, var(--color-footer-line) 7px, var(--color-footer-line) 15px, var(--color-shadow) 15px);
+  transition: opacity 0.3s, visibility 0.3s, background-image 0.3s;
 }
 
-/* не помогает */
-.products__link-title:active:not(:focus),
-.products__link-img:active:not(:focus) {
-  outline: none;
-}
-
-.products__link-img {
-  position: relative;
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.products__image {
-  display: block;
-}
-
-.products__title {
-  margin: 0;
-  max-width: 226px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-}
-
-.products__title--amateur,
-.products__title--unsinkable {
-  max-width: 144px;
-}
-
-.products__price {
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.products__item--download,
-.products__item--pagination {
-  grid-column: 1 / -1;
+.products__link:active .products__title,
+.products__link:active .products__price {
+  opacity: 0.3;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .products__link-download {
   display: block;
+  margin-bottom: 44px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 2px;
@@ -2273,7 +2285,7 @@ img {
 }
 
 .products__link-btn--prev {
-  padding-left: 25px;
+  padding-right: 21px;
 }
 
 .products__link-btn--next {
