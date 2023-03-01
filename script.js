@@ -1,6 +1,6 @@
 'use strict';
 
-let btnCatalog = document.querySelector('.navigation__link--plus');
+let btnCatalog = document.querySelector('.navigation__link-plus');
 let navCatalog = document.querySelector('.navigation__wrap-catalog');
 
 btnCatalog.addEventListener('click', function() {
