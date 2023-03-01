@@ -1225,20 +1225,18 @@ img {
 }
 
 .mailing-container {
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 64px;
   padding-bottom: 56px;
-}
-
-.mailing__wrap-top {
-  display: flex;
-  min-height: 210px;
-  margin-bottom: 33px;
 }
 
 .mailing__title {
   width: 50%;
   margin: 0;
   padding-right: 170px;
+  padding-bottom: 40px;
+  min-height: 243px;
   transform: translateX(7px);
 }
 
@@ -1247,11 +1245,13 @@ img {
   margin: 0;
   padding-top: 8px;
   padding-right: 25px;
+  padding-bottom: 40px;
   padding-left: 27px;
 }
 
 .mailing__form {
   display: flex;
+  width: 100%;
 }
 
 .mailing__input {

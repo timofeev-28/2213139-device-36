@@ -31,7 +31,9 @@
             </li>
             <li class="navigation__item-user navigation__item-user--basket navigation__popover popover">
               <a class="navigation__link-user navigation__link-user--basket" href="#">
-                <span class="navigation__basket-quantity">2</span>Корзина</a>
+                <span class="navigation__basket-quantity"><span class="visually-hidden">В корзине товаров</span>2</span>
+                Корзина
+              </a>
               <!-- ПОПОВЕР -->
               <div class="popover__wrap ">
                 <ul class="popover__list">
@@ -310,15 +312,10 @@
         <span class="main__special-text">Доставим редкий товар под заказ</span>
         <svg class="main__special-delyvery-info" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="20.5" cy="20" r="20" fill="#DCDCDC" fill-opacity="0.5"/>
-          <g opacity="0.3" clip-path="url(#clip0_11365_562)">
+          <g opacity="0.3">
           <path d="M21 14H19V16H21V14Z" fill="black"/>
           <path d="M21 18H19V26H21V18Z" fill="black"/>
           </g>
-          <defs>
-          <clipPath id="clip0_11365_562">
-          <rect width="2" height="12" fill="white" transform="translate(19 14)"/>
-          </clipPath>
-          </defs>
           </svg>
       </a>
 
@@ -358,13 +355,11 @@
 
       <section class="mailing">
         <div class="container mailing-container">
-          <div class="mailing__wrap-top">
-            <h2 class="mailing__title title">Подпишитесь на рассылку</h2>
-            <p class="mailing__descr text">
-              Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции,
-              спецпредложения и вот это вот всё.
-            </p>
-          </div>
+          <h2 class="mailing__title title">Подпишитесь на рассылку</h2>
+          <p class="mailing__descr text">
+            Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции,
+            спецпредложения и вот это вот всё.
+          </p>
           <form class="mailing__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email">Введите ваш e-mail</label>
             <input class="mailing__input" type="email" placeholder="Ваш e-mail" id="email">
