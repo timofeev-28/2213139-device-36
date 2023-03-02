@@ -479,10 +479,6 @@ img {
   transition: opacity 0.3s ease;
 }
 
-.navigation__link-plus-js::after {
-  background-image: url("../images/index/header-minus.svg");
-}
-
 .navigation__link-plus:hover::after,
 .navigation__link-plus:active::after {
   opacity: 1;
@@ -508,6 +504,14 @@ img {
 
 .navigation__item--btn {
   margin-right: auto;
+}
+
+.navigation__item--btn:focus-within .navigation__wrap-catalog {
+  display: flex;
+}
+
+.navigation__item--btn:focus-within .navigation__link-plus::after {
+  background-image: url("../images/index/header-minus.svg");
 }
 
 /* выпадашка */
@@ -537,9 +541,9 @@ img {
   margin-bottom: 14px;
 }
 
-.js-visible {
+/* .js-visible {
   display: flex;
-}
+} */
 
 .navigation__link-catalog {
   font-size: 16px;
