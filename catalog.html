@@ -38,6 +38,7 @@
                 <span class="navigation__basket-quantity">2</span>Корзина</a>
               <!-- ПОПОВЕР -->
               <div class="popover__wrap">
+                <h2 class="visually-hidden">Корзина с выбранными товарами</h2>
                 <ul class="popover__list">
                   <li class="popover__item">
                     <a class="popover__link" href="#">
@@ -139,11 +140,11 @@
                     class="visually-hidden">Максимум</span></button>
               </div>
               <label class="form__range-label form__range-label--from" for="from">от
-                <input class="form__range-input form__range-from" type="text" id="from" value="0"
+                <input class="form__range-input form__range-from" type="number" name="min-price" id="from" value="0"
                   aria-label="Введите число от 0">
               </label>
               <label class="form__range-label form__range-label--before" for="before">до
-                <input class="form__range-input form__range-before" type="text" id="before" value="5000"
+                <input class="form__range-input form__range-before" type="number" name="max-price" id="before" value="5000"
                   aria-label="Введите число не больше 5000">
               </label>
             </fieldset>
@@ -151,24 +152,39 @@
               <legend class="form__subtitle form__subtitle--checkbox">Цвет</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <input class="form__check" type="checkbox" id="black" name="color-black" checked>
-                  <label class="form__label" for="black">Чёрный</label>
+                  <label class="form__label" for="black">
+                    <input class="form__check visually-hidden" type="checkbox" id="black" name="color-black" checked>
+                    <span class="form__mark"></span>
+                    <span class="form__label-text">Чёрный</span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <input class="form__check" type="checkbox" id="white" name="color-white" checked>
-                  <label class="form__label" for="white">Белый</label>
+                  <label class="form__label" for="white">
+                    <input class="form__check visually-hidden" type="checkbox" id="white" name="color-white" checked>
+                    <span class="form__mark"></span>
+                    <span class="form__label-text">Белый</span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <input class="form__check" type="checkbox" id="blue" name="color-blue">
-                  <label class="form__label" for="blue">Синий</label>
+                    <label class="form__label" for="blue">
+                    <input class="form__check visually-hidden" type="checkbox" id="blue" name="color-blue">
+                    <span class="form__mark"></span>
+                    <span class="form__label-text">Синий</span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <input class="form__check" type="checkbox" id="red" name="color-red">
-                  <label class="form__label" for="red">Красный</label>
+                  <label class="form__label" for="red">
+                    <input class="form__check visually-hidden" type="checkbox" id="red" name="color-red">
+                    <span class="form__mark"></span>
+                    <span class="form__label-text">Красный</span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <input class="form__check" type="checkbox" id="pink" name="color-pink">
-                  <label class="form__label" for="pink">Розовый</label>
+                  <label class="form__label" for="pink">
+                    <input class="form__check visually-hidden" type="checkbox" id="pink" name="color-pink">
+                    <span class="form__mark"></span>
+                    <span class="form__label-text">Розовый</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -176,12 +192,18 @@
               <legend class="form__subtitle form__subtitle--radio">Bluetooth</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <input class="form__radio" type="radio" id="yes" name="Bluetooth" value="yes" checked>
-                  <label class="form__label" for="yes">Есть</label>
+                  <label class="form__label" for="yes">
+                    <input class="form__radio visually-hidden" type="radio" id="yes" name="Bluetooth" value="yes" checked>
+                    <span class="form__mark-radio"></span>
+                    <span class="form__label-text">Есть</span>
+                  </label>
                 </li>
-                <li class="form__item">
-                  <input class="form__radio" type="radio" id="no" name="Bluetooth" value="no">
-                  <label class="form__label" for="no">Нет</label>
+                <li class="form__item form__item--radio">
+                  <label class="form__label" for="no">
+                    <input class="form__radio visually-hidden" type="radio" id="no" name="Bluetooth" value="no">
+                    <span class="form__mark-radio"></span>
+                    <span class="form__label-text">Нет</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -326,7 +348,8 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div class="modal-container">
+
   </body>
 
 </html>

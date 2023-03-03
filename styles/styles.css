@@ -1992,6 +1992,11 @@ img {
   outline: none;
 }
 
+.form__range-input::-webkit-outer-spin-button,
+.form__range-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
 .form__range-label:focus-within {
   outline: 2px solid var(--color-focus);
   transition: outline 0.3s ease;
@@ -2009,11 +2014,11 @@ img {
 
 /* ЧЕКБОКСЫ */
 .form__fieldset--checkbox {
-  padding-bottom: 32px;
+  padding-bottom: 33px;
 }
 
 .form__subtitle--checkbox {
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 }
 
 .form__list {
@@ -2027,40 +2032,73 @@ img {
 }
 
 .form__label {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  transition: opacity 0.3s ease;
+}
+
+.form__check:checked + .form__mark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/catalog/form-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.form__check:checked + .form__mark {
+  opacity: 1;
+}
+
+.form__mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-black);
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.form__label-text {
   font-size: 16px;
   line-height: 20px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
 }
 
-.form__check {
-  margin-right: 15px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.form__check:hover+.form__label {
+.form__label:hover {
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
-.form__check:focus-visible {
+.form__check:focus-visible + .form__mark,
+.form__radio:focus-visible + .form__mark-radio {
   outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
   transition: outline 0.3s ease;
 }
 
-.form__check:active+.form__label {
+.form__label:active {
   opacity: 0.3;
   transition: opacity 0.3s ease;
 }
 
-.form__check:disabled+.form__label {
+.form__check:disabled ~ .form__mark,
+.form__check:disabled ~ .form__label-text {
   opacity: 0.1;
+  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .form__subtitle--radio {
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 }
 
 .form__fieldset--radio {
@@ -2068,33 +2106,36 @@ img {
   border-bottom: none;
 }
 
-.form__radio {
-  margin-right: 15px;
+.form__item--radio {
+  transform: translateY(4px);
 }
 
-.form__radio {
-  margin-right: 15px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
+.form__mark-radio {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-black);
+  border-radius: 50%;
 }
 
-.form__radio:hover+.form__label {
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+.form__radio:checked + .form__mark-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-black);
 }
 
-.form__radio:focus-visible {
-  outline: 2px solid var(--color-focus);
-  transition: outline 0.3s ease;
-}
-
-.form__radio:active+.form__label {
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
-}
-
-.form__radio:disabled+.form__label {
+.form__radio:disabled ~ .form__mark-radio,
+.form__radio:disabled ~ .form__label-text {
   opacity: 0.1;
+  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
@@ -2138,7 +2179,8 @@ img {
 
 .catalog__sorting-select {
   margin-right: auto;
-  padding-right: 11px;
+  padding-right: 12px;
+  width: 138px;
   font-size: 18px;
   line-height: 30px;
   background-color: transparent;
