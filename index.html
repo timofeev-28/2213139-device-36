@@ -18,7 +18,8 @@
         <div class="navigation__user">
           <form class="navigation__form search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="search-form__label" for="search">
-              <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту" aria-label="Поле для поиска по сайту">
+              <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту"
+                aria-label="Поле для поиска по сайту">
             </label>
             <button class="search-form__btn" type="submit">Найти</button>
           </form>
@@ -43,7 +44,8 @@
                         height="43" alt="Любительская селфи-палка.">
                       <h2 class="popover__title">Любительская<br>селфи-палка</h2>
                     </a>
-                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из корзины</span> </button>
+                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из
+                        корзины</span> </button>
                   </li>
                   <li class="popover__item">
                     <a class="popover__link" href="#">
@@ -51,7 +53,8 @@
                         height="43" alt="Профессиональная селфи-палка.">
                       <h2 class="popover__title">Профессиональная селфи-палка</h2>
                     </a>
-                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из корзины</span> </button>
+                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из
+                        корзины</span> </button>
                   </li>
                 </ul>
                 <div class="popover__total">
@@ -67,7 +70,7 @@
           <li class="navigation__item navigation__item--btn">
             <button class="navigation__link-plus btn btn-reset">Каталог
               товаров</button>
-                      <!-- ВЫПАДАШКА -->
+            <!-- ВЫПАДАШКА -->
             <div class="navigation__wrap-catalog">
               <ul class="navigation__list-col">
                 <li class="navigation__item-catalog">
@@ -270,15 +273,13 @@
           <ul class="delivery__list">
             <li class="delivery__item delivery__item--current" tabindex="0">
               <button class="delivery__btn btn btn-reset delivery__btn--current" tabindex="-1" type="button"
-              data-path="delivery">Доставка</button>
+                data-path="delivery">Доставка</button>
             </li>
             <li class="delivery__item">
-              <button class="delivery__btn btn btn-line btn-reset" type="button"
-              data-path="warranty">Гарантия</button>
+              <button class="delivery__btn btn btn-line btn-reset" type="button" data-path="warranty">Гарантия</button>
             </li>
             <li class="delivery__item">
-              <button class="delivery__btn btn btn-line btn-reset" type="button"
-              data-path="credit">Кредит</button>
+              <button class="delivery__btn btn btn-line btn-reset" type="button" data-path="credit">Кредит</button>
             </li>
           </ul>
           <!-- ТАБЫ -->
@@ -310,13 +311,14 @@
 
       <a class="main__special-delyvery container" href="#">
         <span class="main__special-text">Доставим редкий товар под заказ</span>
-        <svg class="main__special-delyvery-info" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20.5" cy="20" r="20" fill="#DCDCDC" fill-opacity="0.5"/>
+        <svg class="main__special-delyvery-info" width="41" height="40" viewBox="0 0 41 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20.5" cy="20" r="20" fill="#DCDCDC" fill-opacity="0.5" />
           <g opacity="0.3">
-          <path d="M21 14H19V16H21V14Z" fill="black"/>
-          <path d="M21 18H19V26H21V18Z" fill="black"/>
+            <path d="M21 14H19V16H21V14Z" fill="black" />
+            <path d="M21 18H19V26H21V18Z" fill="black" />
           </g>
-          </svg>
+        </svg>
       </a>
 
       <div class="container about-container">
@@ -410,11 +412,45 @@
             </a>
           </li>
         </ul>
-        <a class="footer__logo-academy" href="https://htmlacademy.ru/"><span class="visually-hidden">Логотип HTML-Академии</span></a>
+        <a class="footer__logo-academy" href="https://htmlacademy.ru/"><span class="visually-hidden">Логотип
+            HTML-Академии</span></a>
       </div>
     </footer>
 
-    <div class="modal-container">
+    <div class="modal modal-container">
+      <div class="modal__delivery">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <button class="modal__btn-close">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="modal__label modal__label--name" for="name">Ваше имя:</label>
+          <input class="modal__input modal__input--name" type="text" name="name" id="name" placeholder="Введите имя"
+            required>
+          <p class="modal__massage modal__massage--error-name">Добавьте имя</p>
+
+          <label class="modal__label modal__label--email" for="e-mail">Ваш e-mail:</label>
+          <input class="modal__input modal__input--email" type="email" name="email" id="e-mail" placeholder="Почта"
+            required>
+          <p class="modal__massage modal__massage--error-email">Забавный у вас адрес</p>
+
+          <label class="modal__label modal__label--order" for="order">Что нужно привезти:</label>
+          <input class="modal__input modal__input--order" type="text" name="order" id="order"
+            placeholder="В свободной форме" required>
+
+          <span class="modal__label modal__label--number"><label class="modal__label modal__label--number"
+              for="number">Количество:</label><button class="modal__btn-tooltip" type="button"><span class="visually-hidden">Информация о количестве предметов в заказе</span></button></span>
+          <button class="modal__btn modal__btn--minus btn-reset" type="button"><span class="visually-hidden">Уменьшить
+              количество</span></button>
+          <input class="modal__input modal__input--number" type="number" name="number" id="number" value="1" step="1"
+            min="1" required>
+          <button class="modal__btn modal__btn--plus btn-reset" type="button"><span class="visually-hidden">Увеличить
+              количество</span></button>
+
+          <button class="modal__btn-submit btn btn-line btn-reset" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
 
   </body>
 

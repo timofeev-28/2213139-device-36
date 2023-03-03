@@ -1758,6 +1758,238 @@ img {
   transition: background-color 0.3s ease;
 }
 
+/* МОДАЛЬНОЕ ОКНО */
+
+.modal-container {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);;
+}
+
+.modal__delivery {
+  position: relative;
+  z-index: 3;
+  margin: auto;
+  padding: 72px 80px;
+  width: 920px;
+  background-color: #ffffff;
+  border: 10px solid var(--color-black);
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 42px;
+  font-family: var(--second-font);
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  background-image: url("../images/index/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.modal__btn-close:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.modal__btn-close:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  transition: outline 0.3s;
+}
+
+.modal__btn-close:active {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.modal__form {
+  display: grid;
+  grid-template-columns: 360px 140px 180px;
+  column-gap: 40px;
+}
+
+.modal__label {
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.modal__input {
+  padding: 20px;
+  padding-right: 42px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var(--color-background-gray);
+  border: none;
+}
+
+.modal__input:focus-visible {
+  outline: 2px solid var(--color-focus);
+  transition: outline 0.3s;
+}
+
+.modal__btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+  transition: outline 0.3s;
+}
+
+.modal__label--name {
+  grid-column: 1 / 2;
+}
+
+.modal__input--name {
+  grid-column: 1 / 2;
+  background-image: url("../images/index/modal-man.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.modal__massage {
+  margin-top: 0;
+  margin-bottom: 42px;
+  font-size: 14px;
+}
+
+.modal__massage--error-name {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.modal__label--email {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.modal__input--email {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  background-image: url("../images/index/modal-envelope.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  border: 1px solid #ff3d3d;
+}
+
+.modal__massage--error-email {
+  grid-column: 2 / -1;
+  grid-row: 3 / 4;
+  margin: 0;
+  color: #ff3d3d;
+}
+
+.modal__label--order {
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+
+}
+
+.modal__input--order {
+  grid-column: 1 / 3;
+  grid-row: 5 / 6;
+  margin-bottom: 42px;
+}
+
+.modal__label--number {
+  position: relative;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.modal__btn-tooltip {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 34px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  background-image: url("../images/index/modal-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__btn-tooltip:focus-within {
+  outline: 2px solid var(--color-focus);
+  transition: outline 0.3s;
+}
+
+.modal__btn {
+  margin-bottom: 42px;
+  width: 60px;
+  background-color: var(--color-background-gray);
+}
+
+.modal__btn:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.modal__input::-webkit-outer-spin-button,
+.modal__input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.modal__btn--minus {
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+  justify-self: start;
+  background-image: url("../images/index/modal-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal__input--number {
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+  justify-self: center;
+  margin-bottom: 42px;
+  padding: 0;
+  width: 60px;
+  text-align: center;
+}
+
+.modal__btn--plus {
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+  justify-self: end;
+  background-image: url("../images/index/modal-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal__btn-submit {
+  /* grid-row: 6 / 7; */
+  width: 200px;
+}
+
 /* CATALOG-PAGE */
 /* HEADER */
 
