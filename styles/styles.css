@@ -2025,6 +2025,7 @@ img {
 
 .modal__input--number {
   position: relative;
+  -moz-appearance: textfield;
 }
 
 .modal__btn:hover:not(:disabled) path{
@@ -2313,11 +2314,13 @@ img {
   border: none;
   background-color: transparent;
   outline: none;
+  -moz-appearance: textfield;
 }
 
 .form__range-input::-webkit-outer-spin-button,
 .form__range-input::-webkit-inner-spin-button {
   appearance: none;
+  margin: 0;
 }
 
 .form__range-label:focus-within {
