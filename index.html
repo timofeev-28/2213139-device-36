@@ -68,8 +68,7 @@
         </div>
         <ul class="navigation__list">
           <li class="navigation__item navigation__item--btn">
-            <button class="navigation__link-plus btn btn-reset">Каталог
-              товаров</button>
+            <button class="navigation__link-plus btn btn-reset">Каталог товаров</button>
             <!-- ВЫПАДАШКА -->
             <div class="navigation__wrap-catalog">
               <ul class="navigation__list-col">
@@ -320,35 +319,28 @@
           </g>
         </svg>
       </a>
-
+      <!-- МОДАЛЬНОЕ ОКНО -->
       <div class="modal modal-container">
         <div class="modal__delivery">
           <h2 class="modal-title">Доставка под заказ</h2>
           <button class="modal__btn-close">
             <span class="visually-hidden">Закрыть</span>
           </button>
-
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
-
             <p class="modal__field-group modal__field-group--name">
               <label class="modal__label modal__label--name" for="name">Ваше имя:</label>
-              <input class="modal__input modal__input--name" type="text" name="name" id="name" placeholder="Введите имя"
-                required>
+              <input class="modal__input modal__input--name" type="text" name="name" id="name" placeholder="Введите имя" required>
               <span class="modal__massage modal__massage--error-name">Добавьте имя</span>
             </p>
-
             <p class="modal__field-group modal__field-group--email">
               <label class="modal__label modal__label--email" for="e-mail">Ваш e-mail:</label>
-              <input class="modal__input modal__input--email" type="email" name="email" id="e-mail" placeholder="Почта"
-                required>
+              <input class="modal__input modal__input--email" type="email" name="email" id="e-mail" placeholder="Почта" required>
               <span class="modal__massage modal__massage--error-email">Забавный у вас адрес</span>
             </p>
-
             <p class="modal__field-group modal__field-group--order">
               <label class="modal__label modal__label--order" for="order">Что нужно привезти:</label>
               <input class="modal__input modal__input--order" type="text" name="order" id="order" placeholder="В свободной форме" required>
             </p>
-
               <!-- ЗДЕСЬ ТУЛТИП -->
             <p class="modal__field-group modal__field-group--number">
               <span class="modal__label modal__label--number">
@@ -363,19 +355,21 @@
                 </span>
               </span>
               <span class="modal__wrap-btn-number">
-                <button class="modal__btn modal__btn--minus btn-reset" type="button"><span class="visually-hidden">Уменьшить
-                  количество</span>
+                <button class="modal__btn modal__btn--minus btn-reset" type="button">
+                  <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 0H0V2H16V0Z" fill="black"/>
+                  </svg>
                 </button>
                 <input class="modal__input modal__input--number" type="number" name="number" id="number" value="1" step="1"
-                  min="1" required>
-                <button class="modal__btn modal__btn--plus btn-reset" type="button"><span class="visually-hidden">Увеличить
-                    количество</span>
+                min="1" required>
+                <button class="modal__btn modal__btn--plus btn-reset" type="button">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"/>
+                  </svg>
                 </button>
               </span>
             </p>
-
             <button class="modal__btn-submit btn btn-line btn-reset" type="submit">Отправить</button>
-
           </form>
         </div>
       </div>
