@@ -591,6 +591,7 @@ img {
   z-index: 1;
   display: grid;
   width: 320px;
+  min-height: 301px;
   font-size: 16px;
   line-height: 20px;
   color: var(--color-white);
