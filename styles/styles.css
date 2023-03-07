@@ -222,7 +222,6 @@ img {
   display: flex;
   margin-bottom: 45px;
   align-items: center;
-  justify-content: space-between;
 }
 
 .search-form {
@@ -525,7 +524,8 @@ img {
   background-image: url("../images/index/header-minus.svg");
 }
 
-/* выпадашка */
+/* выпадашка из Каталог Товаров */
+
 .navigation__wrap-catalog {
   position: absolute;
   top: 131px;
@@ -820,28 +820,28 @@ img {
   width: 48.3%;
 }
 
-.slider__btn-nav {
+.slider__control {
   position: absolute;
   transition: opacity 0.3s ease;
 }
 
-.slider__btn-nav:hover {
+.slider__control:hover {
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
-.slider__btn-nav:focus-visible {
+.slider__control:focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   transition: outline 0.3s ease;
 }
 
-.slider__btn-nav:active {
+.slider__control:active {
   opacity: 0.3;
   transition: opacity 0.3s ease;
 }
 
-.slider__btn-nav:disabled {
+.slider__control:disabled {
   opacity: 0.1;
   transition: opacity 0.3s ease;
 }
@@ -2606,7 +2606,8 @@ img {
 }
 
 /* знак new */
-.products__img-wrap--new::after {
+
+.products__new + .products__img-wrap::after {
   content: "";
   position: absolute;
   top: 27px;
@@ -2759,6 +2760,7 @@ img {
 
 .products__link-nav {
   display: inline-block;
+  padding: 4px;
   padding-top: 9px;
   min-width: 40px;
   height: 40px;
