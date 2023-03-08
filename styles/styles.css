@@ -1739,11 +1739,11 @@ img {
   height: 33px;
   background-color: var(--color-footer-line);
   -webkit-mask-image: url("../images/index/logo-academy.svg");
-  mask: url("../images/index/logo-academy.svg");
+  mask-image: url("../images/index/logo-academy.svg");
   -webkit-mask-size: contain;
-  mask-size: contain;
+          mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   transition: background-color 0.3s ease;
 }
 
@@ -2534,25 +2534,25 @@ img {
 }
 
 .catalog__sorting-link--up::before {
-  -webkit-mask: url("../images/catalog/arrow-up.svg");
-  mask: url("../images/catalog/arrow-up.svg");
+  -webkit-mask-image: url("../images/catalog/arrow-up.svg");
+          mask-image: url("../images/catalog/arrow-up.svg");
   -webkit-mask-size: 11px 10px;
-  mask-size: 11px 10px;
+          mask-size: 11px 10px;
   -webkit-mask-position: center;
-  mask-position: center;
+          mask-position: center;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 
 .catalog__sorting-link--down::before {
-  -webkit-mask: url("../images/catalog/arrow-down.svg");
-  mask: url("../images/catalog/arrow-down.svg");
+  -webkit-mask-image: url("../images/catalog/arrow-down.svg");
+          mask-image: url("../images/catalog/arrow-down.svg");
   -webkit-mask-size: 11px 10px;
-  mask-size: 11px 10px;
+          mask-size: 11px 10px;
   -webkit-mask-position: center;
-  mask-position: center;
+          mask-position: center;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 
 .catalog__sorting-link:hover::before {
@@ -2604,9 +2604,10 @@ img {
   width: 360px;
   height: 380px;
   overflow: hidden;
+  background-color: var(--color-shadow);
 }
 
-/* знак new */
+/* знак NEW */
 
 .products__new + .products__img-wrap::after {
   content: "";
@@ -2774,6 +2775,10 @@ img {
 .products__link-nav:hover {
   color: var(--color-text);
   transition: color 0.3s;
+}
+
+.products__link-nav--points:hover {
+  color: #b9b9b9;
 }
 
 .products__link-nav:focus-visible {
