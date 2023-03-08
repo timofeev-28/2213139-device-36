@@ -76,9 +76,7 @@
                   <a class="navigation__link-catalog" href="#">Виртуальная реальность</a>
                 </li>
                 <li class="navigation__item-catalog">
-                  <!-- ссылка временная, адрес у страницы с моноподами другой -->
-                  <a class="navigation__link-catalog navigation__link-catalog--outline link-reset"
-                    href="catalog.html">Моноподы для cелфи</a>
+                  <a class="navigation__link-catalog" href="#">Моноподы для cелфи</a>
                 </li>
                 <li class="navigation__item-catalog">
                   <a class="navigation__link-catalog" href="#">Экшн-камеры</a>
@@ -208,6 +206,25 @@
             </fieldset>
             <button class="form__btn btn btn-line btn-reset" type="submit">Показать</button>
           </form>
+          <div class="catalog__sorting">
+            <p class="catalog__sorting-title">Сортировка:</p>
+            <select class="catalog__sorting-select" name="select">
+              <option value="Популярные">Популярные</option>
+              <option value="Кастомные">Кастомные</option>
+              <option value="Офигенные">Офигенные</option>
+              <option value="Дорогущие">Дорогущие</option>
+            </select>
+            <ul class="catalog__sorting-list">
+              <li class="catalog__sorting-item">
+                <a class="catalog__sorting-link catalog__sorting-link--up" href="#"><span
+                    class="visually-hidden">Вверх</span></a>
+              </li>
+              <li class="catalog__sorting-item">
+                <a class="catalog__sorting-link catalog__sorting-link--down" href="#"><span
+                    class="visually-hidden">Вниз</span></a>
+              </li>
+            </ul>
+          </div>
           <div class="catalog__products products">
             <ul class="products__list">
               <li class="products__item">
@@ -223,6 +240,7 @@
               </li>
               <li class="products__item">
                 <a class="products__link" href="#">
+                  <p class="visually-hidden products__new">Новый товар</p>
                   <div class="products__img-wrap products__img-wrap--new">
                     <img class="products__image" src="images/catalog/catalog-professional-selfie-stick.jpg" width="360"
                       height="380" alt="Профессиональная селфи-палка.">
@@ -245,6 +263,7 @@
               </li>
               <li class="products__item">
                 <a class="products__link" href="#">
+                  <p class="visually-hidden products__new">Новый товар</p>
                   <div class="products__img-wrap">
                     <img class="products__image" src="images/catalog/catalog-selfie-stick-follow-me.jpg" width="360"
                       height="380" alt="Селфи-палка «Следуй за мной».">
@@ -260,42 +279,23 @@
               <a class="products__link-btn products__link-btn--prev products__link-btn--disabled" href="#">Назад</a>
               <ul class="products__list-nav">
                 <li class="products__item-nav">
-                  <a class="products__link-nav products__link-nav--current" href="#">1</a>
+                  <a class="products__link-nav products__link-nav--current" href="#"><span class="visually-hidden">Номер страницы списка товаров</span>1</a>
                 </li>
                 <li class="products__item-nav">
-                  <a class="products__link-nav" href="#">2</a>
+                  <a class="products__link-nav" href="#"><span class="visually-hidden">Номер страницы списка товаров</span>2</a>
                 </li>
                 <li class="products__item-nav">
-                  <a class="products__link-nav" href="#">3</a>
+                  <a class="products__link-nav" href="#"><span class="visually-hidden">Номер страницы списка товаров</span>3</a>
                 </li>
                 <li class="products__item-nav">
                   <a class="products__link-nav products__link-nav--points" tabindex="-1">...</a>
                 </li>
                 <li class="products__item-nav">
-                  <a class="products__link-nav" href="#">15</a>
+                  <a class="products__link-nav" href="#"><span class="visually-hidden">Номер страницы списка товаров</span>15</a>
                 </li>
               </ul>
               <a class="products__link-btn products__link-btn--next" href="#">Вперёд</a>
             </div>
-          </div>
-          <div class="catalog__sorting">
-            <p class="catalog__sorting-title">Сортировка:</p>
-            <select class="catalog__sorting-select" name="select">
-              <option value="Популярные">Популярные</option>
-              <option value="Кастомные">Кастомные</option>
-              <option value="Офигенные">Офигенные</option>
-              <option value="Дорогущие">Дорогущие</option>
-            </select>
-            <ul class="catalog__sorting-list">
-              <li class="catalog__sorting-item">
-                <a class="catalog__sorting-link catalog__sorting-link--up" href="#"><span
-                    class="visually-hidden">Вверх</span></a>
-              </li>
-              <li class="catalog__sorting-item">
-                <a class="catalog__sorting-link catalog__sorting-link--down" href="#"><span
-                    class="visually-hidden">Вниз</span></a>
-              </li>
-            </ul>
           </div>
         </div>
       </section>
