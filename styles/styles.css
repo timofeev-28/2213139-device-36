@@ -1282,6 +1282,7 @@ img {
 .about__descr {
   margin-top: 0;
   margin-bottom: 30px;
+  max-width: 500px;
 }
 
 .about__list {
@@ -1344,6 +1345,7 @@ img {
 .contacts__descr {
   margin-top: 0;
   margin-bottom: 30px;
+  max-width: 510px;
 }
 
 .contacts__address {
@@ -1779,7 +1781,7 @@ img {
   position: relative;
   z-index: 3;
   margin: auto;
-  padding: 72px 80px;
+  padding: 62px 70px;
   width: 920px;
   background-color: #ffffff;
   border: 10px solid var(--color-black);
@@ -1796,8 +1798,8 @@ img {
 
 .modal__btn-close {
   position: absolute;
-  top: 80px;
-  right: 80px;
+  top: 74px;
+  right: 70px;
   padding: 0;
   width: 26px;
   height: 26px;
@@ -1830,7 +1832,7 @@ img {
   display: grid;
   grid-template-columns: 360px 140px 180px;
   column-gap: 40px;
-  row-gap: 42px;
+  row-gap: 40px;
 }
 
 .modal__field-group {
@@ -1904,6 +1906,8 @@ img {
 }
 
 .modal__input--email {
+  text-transform: lowercase;
+  letter-spacing: 0.7px;
   background-image: url("../images/index/modal-envelope.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -1927,7 +1931,7 @@ img {
 .tooltip {
   position: absolute;
   margin-top: -6px;
-  margin-left: 5px;
+  margin-left: 10px;
   display: inline-block;
 }
 
