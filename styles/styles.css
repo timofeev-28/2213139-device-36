@@ -23,15 +23,15 @@
 }
 
 :root {
-  --main-font: Rubik, sans-serif;
-  --second-font: Raleway, sans-serif;
-  --color-black: #000;
-  --color-white: #fff;
-  --dark-gray: #444;
+  --main-font: rubik, sans-serif;
+  --second-font: raleway, sans-serif;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --dark-gray: #444444;
   --gray: #dcdcdc;
   --light: #f0f0f0;
   --yellow: #ffe17f;
-  --violet: #AF4FFF;
+  --violet: #af4fff;
   --red: #ff0000;
   --light-gray: #ebebeb;
   --color-footer-line: #ffc700;
@@ -185,7 +185,7 @@ img {
   padding-right: 60px;
   padding-bottom: 19px;
   padding-left: 60px;
-  background: linear-gradient(to bottom, var(--color-transparent) 40px, var(--color-background) 40px)
+  background: linear-gradient(to bottom, var(--color-transparent) 40px, var(--color-background) 40px);
 }
 
 .header__logo {
@@ -665,7 +665,7 @@ img {
 }
 
 .popover__link:focus-visible::after {
-  opacity: 1  ;
+  opacity: 1;
   transition: opacity 0.3s;
 }
 
@@ -720,7 +720,7 @@ img {
 .popover__total {
   display: flex;
   justify-content: space-between;
-  padding:  12px 20px;
+  padding: 12px 20px;
   background-color: #1a1a1a;
 }
 
@@ -782,6 +782,7 @@ img {
 
 .slider__slide {
   position: relative;
+  display: none;
 }
 
 .slider__item-count::before {
@@ -807,10 +808,6 @@ img {
 
 .slider__item-selfie-stick::before {
   --count: "0"counter(list-item);
-}
-
-.slider__slide {
-  display: none;
 }
 
 .slider__slide--active {
@@ -1014,7 +1011,7 @@ img {
 }
 
 .category__link::before {
-  content: '';
+  content: "";
   display: block;
   width: 160px;
   height: 160px;
@@ -1229,7 +1226,7 @@ img {
   transition: opacity 0.3s;
 }
 
-.main__special-delyvery:hover svg g{
+.main__special-delyvery:hover svg g {
   opacity: 1;
   transition: opacity 0.3s;
 }
@@ -1441,13 +1438,13 @@ img {
   line-height: 30px;
   color: var(--color-text);
   border: none;
-  border-bottom: 3px solid #C4C4C4;
+  border-bottom: 3px solid #c4c4c4;
   background-color: transparent;
 }
 
 .mailing__input::placeholder {
   opacity: 0.5;
-  transition: color .8s;
+  transition: color 0.8s;
 }
 
 .mailing__input:focus-visible {
@@ -1469,7 +1466,7 @@ img {
   padding: 15px 12px;
   padding-left: 20px;
   min-width: 253px;
-  border: 3px solid #C4C4C4;
+  border: 3px solid #c4c4c4;
   transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 }
 
@@ -1639,7 +1636,7 @@ img {
 }
 
 .social-list__link::before {
-  content: '';
+  content: "";
   display: block;
   width: 40px;
   height: 40px;
@@ -1650,7 +1647,7 @@ img {
 
 .social-list__link::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   right: 0;
   bottom: 0;
@@ -1743,9 +1740,9 @@ img {
   -webkit-mask-image: url("../images/index/logo-academy.svg");
   mask-image: url("../images/index/logo-academy.svg");
   -webkit-mask-size: contain;
-          mask-size: contain;
+  mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
   transition: background-color 0.3s ease;
 }
 
@@ -1774,7 +1771,7 @@ img {
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(240, 240, 240, 0.9);;
+  background-color: rgba(240, 240, 240, 0.9);
 }
 
 .modal__delivery {
@@ -1874,7 +1871,7 @@ img {
   transition: outline 0.3s;
 }
 
-.modal__input:invalid:not(:placeholder-shown) + .modal__massage{
+.modal__input:invalid:not(:placeholder-shown) + .modal__massage {
   visibility: visible;
   opacity: 1;
   color: var(--color-error);
@@ -2018,6 +2015,11 @@ img {
 
 .modal__input--number {
   position: relative;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 60px;
+  text-align: center;
   -moz-appearance: textfield;
 }
 
@@ -2026,7 +2028,7 @@ img {
   appearance: none;
 }
 
-.modal__btn:hover:not(:disabled) path{
+.modal__btn:hover:not(:disabled) path {
   fill: #5e5e5e;
   transition: fill 0.3s;
 }
@@ -2042,7 +2044,7 @@ img {
   transition: outline 0.3s;
 }
 
-.modal__btn:active path{
+.modal__btn:active path {
   fill: #a8a8a8;
   transition: fill 0.3s;
 }
@@ -2061,14 +2063,6 @@ img {
 .modal__btn:disabled path {
   fill: #e5e5e5;
   transition: fill 0.3s;
-}
-
-.modal__input--number {
-  padding: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 60px;
-  text-align: center;
 }
 
 .modal__btn-submit {
@@ -2180,18 +2174,15 @@ img {
 
 .form__title {
   margin: 0;
+  margin-bottom: 12px;
+  padding-bottom: 59px;
+  border-bottom: 2px solid var(--color-black);
   font-family: var(--second-font);
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-}
-
-.form__title {
-  margin-bottom: 12px;
-  padding-bottom: 59px;
-  border-bottom: 2px solid var(--color-black);
 }
 
 .form__fieldset {
@@ -2539,24 +2530,24 @@ img {
 
 .catalog__sorting-link--up::before {
   -webkit-mask-image: url("../images/catalog/arrow-up.svg");
-          mask-image: url("../images/catalog/arrow-up.svg");
+  mask-image: url("../images/catalog/arrow-up.svg");
   -webkit-mask-size: 11px 10px;
-          mask-size: 11px 10px;
+  mask-size: 11px 10px;
   -webkit-mask-position: center;
-          mask-position: center;
+  mask-position: center;
   -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .catalog__sorting-link--down::before {
   -webkit-mask-image: url("../images/catalog/arrow-down.svg");
-          mask-image: url("../images/catalog/arrow-down.svg");
+  mask-image: url("../images/catalog/arrow-down.svg");
   -webkit-mask-size: 11px 10px;
-          mask-size: 11px 10px;
+  mask-size: 11px 10px;
   -webkit-mask-position: center;
-          mask-position: center;
+  mask-position: center;
   -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .catalog__sorting-link:hover::before {
@@ -2674,7 +2665,7 @@ img {
   transition: opacity 0.3s, visibility 0.3s, background-image 0.3s;
 }
 
-.products__link:hover .products__detail{
+.products__link:hover .products__detail {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s, visibility 0.3s;
@@ -2691,7 +2682,7 @@ img {
   transition: outline 0.3s;
 }
 
-.products__link:active .products__detail{
+.products__link:active .products__detail {
   visibility: visible;
   opacity: 1;
   background-image: linear-gradient(var(--color-shadow) 7px, var(--color-footer-line) 7px, var(--color-footer-line) 15px, var(--color-shadow) 15px);
