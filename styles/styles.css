@@ -2700,19 +2700,16 @@ img {
 }
 
 .products__link-download {
-  display: block;
+  width: 100%;
   margin-bottom: 44px;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 2px;
   font-family: var(--second-font);
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
   color: inherit;
   border: 3px solid var(--color-background-gray);
   transition: border-color 0.3s ease, opacity 0.3s ease;
