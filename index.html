@@ -18,8 +18,7 @@
         <div class="navigation__user">
           <form class="navigation__form search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="search-form__label" for="search">
-              <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту"
-                aria-label="Поле для поиска по сайту">
+              <input class="search-form__search" type="search" name="search" id="search" placeholder="Поиск по сайту" required aria-label="Поле для поиска по сайту">
             </label>
             <button class="search-form__btn" type="submit">Найти</button>
           </form>
@@ -305,7 +304,7 @@
       <div class="modal modal-container">
         <div class="modal__delivery">
           <h2 class="modal-title">Доставка под заказ</h2>
-          <button class="modal__btn-close">
+          <button class="modal__btn-close" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
@@ -394,7 +393,7 @@
           <p class="mailing__descr text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="mailing__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email">Введите ваш e-mail</label>
-            <input class="mailing__input" type="email" name="email" placeholder="Ваш e-mail" id="email">
+            <input class="mailing__input" type="email" name="email" placeholder="Ваш e-mail" id="email" required>
             <button class="mailing__btn btn" type="submit">Подписаться</button>
             <p class="mailing__text text">Это бесплатно</p>
           </form>
