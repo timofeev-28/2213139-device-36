@@ -146,12 +146,11 @@ img {
 .btn-line::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 38%;
+  bottom: 42%;
   left: 0;
-  transform: translateY(-50%);
   z-index: -1;
   width: 100%;
-  height: 8px;
   background-color: var(--color-background);
   transition: background-color 0.3s ease;
 }
