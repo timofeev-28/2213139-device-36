@@ -146,11 +146,12 @@ img {
 .btn-line::before {
   content: "";
   position: absolute;
-  top: 38%;
-  bottom: 42%;
+  top: 47%;
   left: 0;
   z-index: -1;
+  transform: translateY(-50%);
   width: 100%;
+  height: max(8px, calc(100% - 2 * 10px - 21px));
   background-color: var(--color-background);
   transition: background-color 0.3s ease;
 }
@@ -1240,10 +1241,6 @@ img {
   transition: opacity 0.3s ease;
 }
 
-.main__special-delyvery:focus-within + .modal-container {
-  display: flex;
-}
-
 /* ABOUT */
 
 .about {
@@ -1768,6 +1765,10 @@ img {
   background-color: rgba(240, 240, 240, 0.9);
 }
 
+.modal-container:target {
+  display: flex;
+}
+
 .modal__delivery {
   position: relative;
   z-index: 3;
@@ -1794,12 +1795,11 @@ img {
   padding: 0;
   width: 26px;
   height: 26px;
+  color: inherit;
   background-color: #ffffff;
   background-image: url("../images/index/modal-close.svg");
   background-repeat: no-repeat;
   background-position: center;
-  border: none;
-  cursor: pointer;
   transition: opacity 0.3s;
 }
 
