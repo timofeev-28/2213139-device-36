@@ -289,7 +289,7 @@
         </div>
       </section>
 
-      <a class="main__special-delyvery container" href="#">
+      <a class="main__special-delyvery container" href="#modal">
         <span class="main__special-text">Доставим редкий товар под заказ</span>
         <svg class="main__special-delyvery-info" width="41" height="40" viewBox="0 0 41 40" role="img"
           aria-label="Дополнительная информация" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -301,12 +301,12 @@
         </svg>
       </a>
       <!-- МОДАЛЬНОЕ ОКНО -->
-      <div class="modal modal-container">
+      <div class="modal modal-container" id="modal">
         <div class="modal__delivery">
           <h2 class="modal-title">Доставка под заказ</h2>
-          <button class="modal__btn-close" type="button">
+          <a class="modal__btn-close" href="#">
             <span class="visually-hidden">Закрыть</span>
-          </button>
+          </a>
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
             <p class="modal__field-group modal__field-group--name">
               <label class="modal__label modal__label--name" for="name">Ваше имя:</label>
